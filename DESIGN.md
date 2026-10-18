@@ -24,6 +24,8 @@ colors:
   rule: "#C5CBC6"
   rule-on-slate: "#3A4B57"
   error: "#A3261B"
+  placeholder: "#5F6970"
+  hint-on-soil: "#FBF3E8"
 typography:
   display:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
@@ -63,7 +65,39 @@ typography:
     fontSize: "16px"
     fontWeight: 800
     lineHeight: 1.2
+  numeral:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "40px"
+    fontWeight: 900
+    lineHeight: 0.9
+  panel-title:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "22px"
+    fontWeight: 900
+    lineHeight: 1
+  wordmark:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "21px"
+    fontWeight: 900
+    lineHeight: 1
+  wordmark-sub:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "11px"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "0.2em"
+  hint:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 800
+    lineHeight: 1.4
+  small:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "14px"
+    fontWeight: 600
+    lineHeight: 1.4
 rounded:
+  focus: "4px"
   control: "10px"
   photo: "8px"
   pill: "50%"
