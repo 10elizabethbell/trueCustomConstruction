@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>True Custom Construction LLC · Grading, Sod Prep &amp; Remodels</title>
+<meta name="description" content="True Custom Construction LLC: lawn grading for proper drainage, sod prep and remodels. Message us for a free consultation.">
+<meta name="theme-color" content="#C4D6E0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="True Custom Construction LLC">
+<meta property="og:description" content="Grading, sod prep and remodels. Message us for a free consultation.">
+<meta property="og:url" content="https://10elizabethbell.github.io/trueCustomConstruction/">
+<meta property="og:image" content="https://10elizabethbell.github.io/trueCustomConstruction/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2322303A'/%3E%3Cpath d='M0 46 Q32 40 64 50 V64 H0Z' fill='%236B4A2F'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='900' font-size='30' fill='%23F2B417'%3ETC%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --sky-top:#C4D6E0; --sky-low:#E9EAE4;
+  --ground:#ECEDE9; --ground-2:#DFE2DD;
+  --slate:#22303A; --slate-2:#2C3C48;
+  --ink:#1F2B33; --ink-soft:#4A5763;
+  --on-slate:#EEF1F2; --on-slate-soft:#BAC5CD;
+  --yellow:#F2B417; --yellow-deep:#DDA00A;
+  --cedar:#9A5226;
+  --topsoil:#5E4129; --clay:#A4774C;
+  --turf:#4E8A3A;
+  --focus:#2F6FB0;
+  --radius:10px;
+  --gutter:20px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.55 var(--font)}
+::selection{background:var(--yellow);color:var(--ink)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+h1,h2,h3{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1;text-wrap:balance}
+h2{font-size:clamp(34px,8vw,64px)}
+p{margin:0}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Buttons ---------- */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border:2px solid var(--ink);border-radius:var(--radius);font:800 17px/1.2 var(--font);text-decoration:none;cursor:pointer;transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out;width:100%;text-align:center}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-primary{background:var(--yellow);color:var(--ink)}
+.btn-primary:hover{background:var(--yellow-deep)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--ground)}
+.on-slate .btn{border-color:var(--yellow)}
+.on-slate .btn-ghost{color:var(--on-slate);border-color:var(--on-slate)}
+.on-slate .btn-ghost:hover{background:var(--on-slate);color:var(--slate)}
+
+/* ---------- Header + hero ---------- */
+.hero{position:relative;display:flex;flex-direction:column;min-height:100svh;background:linear-gradient(180deg,var(--sky-top) 0%,var(--sky-low) 62%)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px var(--gutter) 0;max-width:1180px;width:100%;margin:0 auto}
+.mark{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.mark b{font-weight:900;font-size:21px;letter-spacing:-.01em;text-transform:uppercase}
+.mark span{font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+.top-phone{font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;min-height:44px;display:flex;align-items:center}
+.top-phone.pending{font-weight:600;font-size:13px;color:var(--ink-soft)}
+.hero-copy{padding:clamp(26px,6svh,64px) var(--gutter) 22px;max-width:1180px;width:100%;margin:0 auto}
+.hero h1{font-size:clamp(44px,12.4vw,104px);line-height:.92;max-width:11ch}
+.promise{margin-top:16px;font-size:clamp(17px,2vw,20px);line-height:1.45;color:var(--ink-soft);max-width:36ch}
+.hero-actions{display:grid;gap:12px;margin-top:22px;max-width:440px}
+.yard{position:relative;flex:1 0 auto;min-height:clamp(236px,36svh,420px)}
+.yard canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+.yard-hint{position:absolute;right:var(--gutter);bottom:14px;margin:0;font-size:14px;font-weight:700;color:#F6EBDD;background:rgba(46,30,16,.84);padding:6px 11px;border-radius:999px;pointer-events:none;transition:opacity .5s ease-out}
+.yard-hint.gone{opacity:0}
+.yard-still{position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,var(--topsoil) 52%,var(--topsoil) 60%,var(--clay) 60%)}
+.yard.live .yard-still{display:none}
+@media (min-width:1024px){
+  .top,.hero-copy{position:relative;z-index:1}
+  .hero-copy{pointer-events:none}
+  .hero-copy a,.hero-copy p,.hero-copy h1{pointer-events:auto}
+  .yard{position:absolute;inset:0;min-height:0}
+  .yard-hint{right:auto;left:var(--gutter);bottom:18px}
+  .hero{min-height:max(100svh,700px)}
+}
+
+/* ---------- Sod strip divider ---------- */
+.sod{position:relative;height:46px;display:block}
+.sod canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sod--to-slate{background:var(--ground)}
+.sod--to-ground{background:var(--slate)}
+
+/* ---------- Services + how it works ---------- */
+.sec{padding:56px 0 64px}
+.services-grid{display:grid;gap:56px}
+.rows{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid #C5CBC6}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;padding:12px 0;border-bottom:1px solid #C5CBC6;text-decoration:none;font-weight:900;text-transform:uppercase;font-size:clamp(25px,6.6vw,34px);line-height:1.05;letter-spacing:-.01em}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.arrow{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--ground-2);color:var(--ink);transition:background-color .18s ease-out}
+.arrow svg{width:20px;height:20px}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--yellow)}
+.row:focus-visible .arrow{outline:3px solid var(--focus);outline-offset:3px}
+.steps{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:26px}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:4px 14px}
+.steps .n{grid-row:span 2;font-weight:900;font-size:40px;line-height:.9;color:var(--cedar)}
+.steps h3{font-size:20px;line-height:1.15;padding-top:2px}
+.steps p{color:var(--ink-soft)}
+
+/* ---------- Work ---------- */
+.on-slate{background:var(--slate);color:var(--on-slate)}
+.work{padding:40px 0 64px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.gallery figure{margin:0;border-radius:8px;overflow:hidden;background:var(--slate-2);aspect-ratio:4/5}
+.gallery figure.wide{grid-column:span 2;aspect-ratio:4/4.2}
+.gallery img{width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
+.gallery-turf{margin-top:-26px;position:relative;z-index:1;background:transparent}
+.fb-more{margin-top:18px;max-width:440px}
+
+/* ---------- Quote form ---------- */
+.quote{padding:56px 0 72px}
+.quote-grid{display:grid;gap:30px}
+.quote-lede{margin-top:14px;color:var(--ink-soft);max-width:40ch}
+form{display:grid;gap:20px}
+.field{display:grid;gap:7px}
+label,.legend{font-weight:800;font-size:16px}
+.opt{font-weight:500;color:var(--ink-soft)}
+input[type=text],input[type=tel],textarea{width:100%;font:16px/1.4 var(--font);color:var(--ink);background:#FBFCFA;border:2px solid #C2C8C3;border-radius:var(--radius);padding:14px;min-height:54px;transition:border-color .15s ease-out,box-shadow .15s ease-out}
+textarea{min-height:120px;resize:vertical}
+input[type=text]:hover,input[type=tel]:hover,textarea:hover{border-color:var(--focus)}
+input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px rgba(47,111,176,.25)}
+input::placeholder,textarea::placeholder{color:#6E7880}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:9px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:flex;align-items:center;min-height:48px;padding:0 16px;border:2px solid #C2C8C3;border-radius:var(--radius);background:#FBFCFA;font-weight:700;cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}
+.chip:hover span{border-color:var(--focus)}
+.chip input:focus-visible+span{border-color:var(--focus);box-shadow:0 0 0 3px rgba(47,111,176,.25)}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--ground)}
+.chip input:checked:focus-visible+span,.chip:hover input:checked+span{border-color:var(--focus)}
+form .btn:hover,form .btn:focus-visible{border-color:var(--focus);outline:none;box-shadow:0 0 0 3px rgba(47,111,176,.25)}
+.err{color:#A3261B;font-size:15px;font-weight:600;min-height:0}
+.err:empty{display:none}
+.invalid{border-color:#A3261B!important}
+.ready{display:grid;gap:14px;padding:20px;border-radius:var(--radius);background:var(--ground-2)}
+.ready[hidden]{display:none}
+.ready h3{font-size:22px}
+.ready textarea{min-height:150px;background:#FBFCFA}
+.ready .row-btns{display:grid;gap:10px}
+
+/* ---------- Close + footer ---------- */
+.close{padding:48px 0 40px}
+.close p{margin-top:16px;color:var(--on-slate-soft);font-size:clamp(17px,2vw,20px);max-width:38ch}
+.close .btn{margin-top:26px;max-width:440px}
+footer{padding:28px 0 calc(28px + env(safe-area-inset-bottom));border-top:1px solid #3A4B57;color:var(--on-slate-soft);font-size:16px}
+.foot{display:grid;gap:10px}
+.foot b{color:var(--on-slate);font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+.foot a{color:var(--on-slate);min-height:44px;display:inline-flex;align-items:center}
+
+/* ---------- Wider screens ---------- */
+@media (min-width:640px){
+  :root{--gutter:32px}
+  .hero-actions{grid-template-columns:1fr 1fr;max-width:none;width:fit-content}
+  .hero-actions .btn{width:auto}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .gallery figure.wide{grid-column:span 2;aspect-ratio:auto}
+}
+@media (min-width:1024px){
+  .sec{padding:88px 0 96px}
+  .services-grid{grid-template-columns:1.1fr 1fr;gap:88px}
+  .quote-grid{grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
+  .gallery{grid-template-columns:repeat(4,1fr);grid-auto-rows:300px}
+  .gallery figure,.gallery figure.wide{aspect-ratio:auto}
+  .gallery figure.tall{grid-row:span 2}
+  .sod{height:56px}
+  .foot{grid-template-columns:auto auto 1fr;gap:32px;align-items:center}
+  .foot .fb{justify-self:end}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<!--
+DIRECTION CONTRACT
+THESIS: A yard crew's site that lets you do the job: grade a lumpy yard that drains toward the house, watch the rain run off the new slope and sod come in.
+OWN-WORLD: Soil cutaway under an overcast sky. Topsoil over clay with stones, a dark board-and-batten wall (their profile-photo house) with a downspout, their yellow tracked Cat 279D skid steer, rain, puddles, turf. Sod strips (grass over a soil band) are the section edges.
+STORY: Offer and free consultation -> what we do (remodels, sod prep, grading & drainage) -> how it goes -> their own job photos standing on turf -> Facebook for more -> quote message -> close.
+FIRST VIEWPORT (phone): wordmark + phone slot, "Built right from the dirt up.", the owner's promise, Message us / Get a free quote, and the drivable yard below.
+FORM: Light limestone ground with charcoal-blue (siding) sections, construction yellow for the primary action, cedar for numerals, water blue for form focus. System sans, heavy uppercase display, plain sentence-case body.
+-->
+<header class="hero">
+  <div class="top">
+    <a class="mark" href="#" aria-label="True Custom Construction LLC, top of page"><b>True Custom</b><span>Construction LLC</span></a>
+    <a class="top-phone pending" data-phone-link href="#quote">Phone coming soon</a>
+  </div>
+  <div class="hero-copy">
+    <h1>Built right from the dirt up.</h1>
+    <p class="promise">From the first pass of the skid steer to the last board, we do it the way we'd want it done at our own house.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" data-messenger href="https://m.me/61585918380470">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.17.16.15.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.71l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.87.38 2.91.38 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>
+        Ask for a free consultation</a>
+      <a class="btn btn-ghost" href="#quote">Get a free quote</a>
+    </div>
+  </div>
+  <div class="yard" id="yard">
+    <div class="yard-still" aria-hidden="true"></div>
+    <canvas aria-label="A yard you can grade: drag across it to drive the skid steer and level the dirt so rain runs away from the house." role="img"></canvas>
+    <p class="yard-hint" aria-hidden="true">Drag to drive the skid steer</p>
+  </div>
+</header>
+
+<main>
+  <section class="sec" id="services">
+    <div class="wrap services-grid">
+      <div>
+        <h2>What we do</h2>
+        <ul class="rows">
+          <li><a class="row" href="#quote" data-job="Remodel">Remodels<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+          <li><a class="row" href="#quote" data-job="Sod prep">Sod prep<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+          <li><a class="row" href="#quote" data-job="Grading &amp; drainage">Grading &amp; drainage<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>How it goes</h2>
+        <ol class="steps">
+          <li><span class="n" aria-hidden="true">1</span><h3>Tell us what's going on</h3><p>Water sitting by the foundation, a lawn that needs starting over, a room you want redone.</p></li>
+          <li><span class="n" aria-hidden="true">2</span><h3>We come look, free</h3><p>We walk it with you and tell you straight what it needs.</p></li>
+          <li><span class="n" aria-hidden="true">3</span><h3>We do the work</h3><p>We show up with the skid steer and the dump truck and leave it the way we'd want our own place.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="sod sod--to-slate" data-sod="slate" aria-hidden="true"><canvas></canvas></div>
+
+  <section class="on-slate work" id="work">
+    <div class="wrap">
+      <h2>Our work</h2>
+      <div class="gallery">
+        <figure class="wide tall"><img src="img/work-01.webp" width="720" height="900" alt="Yellow Cat 279D tracked skid steer on a freshly graded yard" draggable="false" loading="lazy" decoding="async"></figure>
+        <figure><img src="img/work-02.webp" width="720" height="900" alt="Front yard stripped and graded smooth, ready for sod" draggable="false" loading="lazy" decoding="async"></figure>
+        <figure><img src="img/work-03.webp" width="720" height="900" alt="Skid steer bucket working the grade along the side of a house" draggable="false" loading="lazy" decoding="async"></figure>
+        <figure><img src="img/work-04.webp" width="720" height="900" alt="Graded side yard sloping away from the house with a drain riser set in" draggable="false" loading="lazy" decoding="async"></figure>
+        <figure><img src="img/work-05.webp" width="720" height="718" alt="Finished house with dark board-and-batten siding and a cedar garage door" draggable="false" loading="lazy" decoding="async"></figure>
+      </div>
+      <div class="sod gallery-turf" data-sod="slate" aria-hidden="true"><canvas></canvas></div>
+      <a class="btn btn-primary fb-more" href="https://www.facebook.com/profile.php?id=61585918380470">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.43-4.92 8.43-9.94Z"/></svg>
+        Click to see more of our work.</a>
+    </div>
+  </section>
+
+  <div class="sod sod--to-ground" data-sod="ground" aria-hidden="true"><canvas></canvas></div>
+
+  <section class="quote" id="quote">
+    <div class="wrap quote-grid">
+      <div>
+        <h2>Free quote</h2>
+        <p class="quote-lede">Fill this in and we'll have the whole picture before we call you back.</p>
+      </div>
+      <div>
+        <form id="quote-form" novalidate>
+          <div class="field">
+            <label for="q-name">Your name</label>
+            <input type="text" id="q-name" name="name" autocomplete="name" required>
+            <p class="err" id="q-name-err"></p>
+          </div>
+          <div class="field">
+            <label for="q-phone">Phone, so we can reach you</label>
+            <input type="tel" id="q-phone" name="phone" autocomplete="tel" inputmode="tel" required>
+            <p class="err" id="q-phone-err"></p>
+          </div>
+          <fieldset>
+            <legend class="legend">What's the job?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="job" value="Remodel"><span>Remodel</span></label>
+              <label class="chip"><input type="radio" name="job" value="Sod prep"><span>Sod prep</span></label>
+              <label class="chip"><input type="radio" name="job" value="Grading &amp; drainage"><span>Grading &amp; drainage</span></label>
+              <label class="chip"><input type="radio" name="job" value="Something else"><span>Something else</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="q-where">Where's the job? <span class="opt">(optional)</span></label>
+            <input type="text" id="q-where" name="where" autocomplete="address-level2" placeholder="Town or street">
+          </div>
+          <div class="field">
+            <label for="q-notes">Tell us about it <span class="opt">(optional)</span></label>
+            <textarea id="q-notes" name="notes" placeholder="Water pools by the back door after it rains…"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Get my message ready</button>
+        </form>
+        <div class="ready" id="ready" hidden tabindex="-1">
+          <h3 id="ready-title">Your message is ready</h3>
+          <p id="ready-note">We copied it for you. Open Messenger, paste it in and hit send.</p>
+          <label class="sr-only" for="ready-text">Your message</label>
+          <textarea id="ready-text" readonly></textarea>
+          <div class="row-btns">
+            <a class="btn btn-primary" id="ready-send" data-messenger href="https://m.me/61585918380470">Open Messenger</a>
+            <button class="btn btn-ghost" type="button" id="ready-copy">Copy message again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sod sod--to-slate" data-sod="slate" aria-hidden="true"><canvas></canvas></div>
+</main>
+
+<section class="on-slate close" id="close">
+  <div class="wrap">
+    <h2>Let's look at it together.</h2>
+    <p>The consultation is free. Send True Custom Construction a message and we'll come take a look.</p>
+    <a class="btn btn-primary" data-messenger href="https://m.me/61585918380470">Message us on Facebook</a>
+  </div>
+</section>
+<footer class="on-slate">
+  <div class="wrap foot">
+    <b>True Custom Construction LLC</b>
+    <span data-phone-foot>Phone coming soon</span>
+    <a class="fb" href="https://www.facebook.com/profile.php?id=61585918380470">Facebook</a>
+  </div>
+</footer>
+
+<script>
+/* ---------- Business config: fill PHONE in when the owner gives it ---------- */
+var BIZ = {
+  name: 'True Custom Construction',
+  PHONE: '',                 // e.g. '5551234567' — turns on the header number, footer number and text-message hand-off
+  messenger: 'https://m.me/61585918380470'
+};
+
+/* ---------- Phone slots ---------- */
+(function(){
+  if (!BIZ.PHONE) return;
+  var d = BIZ.PHONE.replace(/\D/g,'').slice(-10);
+  var pretty = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
+  document.querySelectorAll('[data-phone-link]').forEach(function(a){
+    a.href = 'tel:+1' + d; a.textContent = pretty; a.classList.remove('pending');
+  });
+  document.querySelectorAll('[data-phone-foot]').forEach(function(s){
+    var a = document.createElement('a'); a.href = 'tel:+1' + d; a.textContent = pretty; s.replaceWith(a);
+  });
+})();
+
+/* ---------- Shared animation loop ---------- */
+var Loop = (function(){
+  var jobs = [], running = false, last = 0;
+  function tick(now){
+    var dt = Math.min(0.05, (now - last) / 1000 || 0.016); last = now;
+    var any = false;
+    for (var i = 0; i < jobs.length; i++) if (jobs[i].visible) { jobs[i].step(dt, now / 1000); any = true; }
+    if (any) requestAnimationFrame(tick); else running = false;
+  }
+  function kick(){ if (!running) { running = true; last = performance.now(); requestAnimationFrame(tick); } }
+  function add(el, job){
+    job.visible = false; jobs.push(job);
+    new IntersectionObserver(function(es){ job.visible = es[0].isIntersecting; if (job.visible) kick(); }, {rootMargin:'80px'}).observe(el);
+  }
+  return { add: add };
+})();
+var REDUCED = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Hero: the yard you grade ---------- */
+(function(){
+  var T = {
+    STEP_PHONE: 4, STEP_DESK: 3,        // px per ground column
+    ROUGH: 0.075,                       // lump height as share of yard height
+    GRADE_RATE: 6.5,                    // how fast the bucket levels (per second)
+    GRADE_OK: 2.2,                      // px from finished grade that counts as graded
+    GRASS_RATE: 0.55, GRASS_LOSS: 2.4,  // sod coming in / getting cut up
+    RAIN: 9,                            // drops per second per 100px of width
+    DROP_VOL: 0.9, INFIL: 0.35, INFIL_GRASS: 2.2,
+    MACHINE_SPEED_PHONE: 190, MACHINE_SPEED_DESK: 300,
+    RESET_AFTER: 13,                    // seconds a finished lawn sits before the next yard
+    USER_IDLE: 9                        // seconds before the machine drives itself again
+  };
+  var yard = document.getElementById('yard'), cv = yard.querySelector('canvas'), ctx = cv.getContext('2d');
+  var hint = yard.querySelector('.yard-hint');
+  var W = 0, H = 0, dpr = 1, STEP = 4, N = 0, i0 = 0, wallW = 0, base = 0, drop = 0, S = 1;
+  var tY, r, r0, g, w, td, bend, bendV, jit, bh, stones = [], grain, drops = [], runners = [], crumbs = [];
+  var m = {x:0, v:0, dir:-1, ang:0}, ptr = {on:false, cx:0, cy:0, x:0}, user = {touched:false, last:-99};
+  var ghost = {t:0, path:[]}, clock = 0, doneFor = 0, fading = 0, phoneish = false, flip = false, eaveY = -20, copyR = 0, copyB = 0;
+  var copyEl = document.querySelector('.hero-copy');
+
+  function rand(a,b){ return a + Math.random()*(b-a); }
+  function makeGrain(){
+    var c = document.createElement('canvas'); c.width = c.height = 140; var x = c.getContext('2d');
+    for (var k = 0; k < 900; k++){
+      var l = Math.random() < .5;
+      x.fillStyle = l ? 'rgba(255,236,205,' + rand(.05,.16) + ')' : 'rgba(30,18,8,' + rand(.08,.22) + ')';
+      var s = rand(.6,1.9); x.fillRect(Math.random()*140, Math.random()*140, s, s*rand(.6,1));
+    }
+    grain = ctx.createPattern(c, 'repeat');
+  }
+  function freshYard(){
+    var A = phoneish ? 21 : 27, p1 = rand(0,6), p2 = rand(0,6), p3 = rand(0,6), span = W - wallW, k = 6.283/span;
+    for (var i = 0; i < N; i++){
+      var x = i*STEP, t = Math.max(0,(x-wallW)/(W-wallW));
+      var v = A*(0.5*Math.sin(x*k*1.4+p1) + 0.32*Math.sin(x*k*(phoneish?3.2:4.6)+p2) + 0.18*Math.sin(x*k*(phoneish?7:11)+p3));
+      v += drop*1.15*(1-t)*(1-t);                                    // slopes back toward the house: water pools there
+      v += A*0.8*Math.exp(-Math.pow((x-wallW-26)/(phoneish?20:34),2)); // the low spot against the foundation
+      r0[i] = v; r[i] = v; g[i] = 0; w[i] = 0;
+    }
+    for (i = 0; i < i0; i++){ r[i] = r0[i] = 0; }
+    // a little standing water to start
+    for (var k = 0; k < 400; k++) settleWater(0.016);
+  }
+  function build(){
+    var rect = cv.getBoundingClientRect(), nw = Math.round(rect.width), nh = Math.round(rect.height);
+    if (nw === W && nh === H) return false;
+    W = nw; H = nh; phoneish = W < 640; flip = W >= 1024;
+    var cr = rect, hr = copyEl.getBoundingClientRect();
+    copyR = hr.left - cr.left + Math.min(hr.width, 760); copyB = hr.bottom - cr.top;
+    dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    cv.width = Math.round(W*dpr); cv.height = Math.round(H*dpr);
+    STEP = phoneish ? T.STEP_PHONE : T.STEP_DESK;
+    N = Math.ceil(W/STEP) + 2;
+    wallW = phoneish ? 24 : flip ? Math.round(Math.min(380, Math.max(230, W*0.21))) : 60;
+    i0 = Math.ceil((wallW+2)/STEP);
+    base = flip ? Math.min(H - 120, Math.max(H*0.74, copyB + 120)) : H*0.42; drop = Math.min(H*0.09, 34);
+    eaveY = flip ? Math.max(84, Math.min(H*0.16, base - 330)) : -20;
+    S = phoneish ? 0.95 : (W < 1100 ? 1.25 : 1.5);
+    tY = new Float32Array(N); r = new Float32Array(N); r0 = new Float32Array(N); g = new Float32Array(N); w = new Float32Array(N);
+    td = new Float32Array(N); bend = new Float32Array(N); bendV = new Float32Array(N); jit = new Float32Array(N); bh = new Float32Array(N);
+    for (var i = 0; i < N; i++){
+      var x = i*STEP, t = Math.max(0,(x-wallW)/(W-wallW));
+      tY[i] = base - drop*(1-t);
+      td[i] = 15 + 4*Math.sin(x*0.02) + 3*Math.sin(x*0.063+1);
+      jit[i] = Math.random(); bh[i] = rand(0.7,1.25);
+    }
+    stones = [];
+    var ns = Math.round(W/9);
+    for (i = 0; i < ns; i++){
+      var sy = rand(base+28, H+6);
+      stones.push({x:rand(wallW+8,W), y:sy, rx:rand(2,6)*(sy>base+60?1.2:0.8), ry:0, sh:rand(0,1)});
+      stones[i].ry = stones[i].rx*rand(.55,.8);
+    }
+    makeGrain(); freshYard();
+    m.x = W*0.78; m.v = 0; m.dir = -1;
+    ghost.path = [W*0.78, wallW + 46*S, W - 18*S, W*0.66]; ghost.t = 0; ghost.leg = 0; ghost.wait = 1.2;
+    drops = []; runners = []; crumbs = []; doneFor = 0;
+    return true;
+  }
+  function surf(i){ return tY[i] + r[i]; }
+  function colAt(x){ return Math.max(i0, Math.min(N-2, Math.round(x/STEP))); }
+  function groundAt(x){ var f = x/STEP, a = Math.max(i0, Math.min(N-2, Math.floor(f))), u = Math.min(1, Math.max(0, f - a)); return surf(a)*(1-u) + surf(a+1)*u; }
+
+  function settleWater(dt){
+    for (var it = 0; it < 3; it++){
+      for (var i = i0; i < N-1; i++){
+        var a = surf(i) - w[i], b = surf(i+1) - w[i+1], d = b - a, f;
+        if (d > 0) f = Math.min(w[i], d*0.42); else f = -Math.min(w[i+1], -d*0.42);
+        w[i] -= f; w[i+1] += f;
+      }
+    }
+    w[N-1] = 0; w[N-2] *= 0.6;
+    for (i = i0; i < N; i++){ w[i] = Math.max(0, Math.min(28, w[i] - (T.INFIL + g[i]*T.INFIL_GRASS)*dt)); }
+  }
+
+  function grade(x, amt, dt){
+    var R = phoneish ? 26 : 40, a = Math.max(i0, Math.floor((x-R)/STEP)), b = Math.min(N-1, Math.ceil((x+R)/STEP));
+    for (var i = a; i <= b; i++){
+      var d = Math.abs(i*STEP - x)/R; if (d >= 1) continue;
+      var f = (1-d)*(1-d), before = r[i];
+      r[i] -= r[i]*Math.min(1, T.GRADE_RATE*amt*f*dt);
+      var moved = Math.abs(before - r[i]);
+      if (moved > 0.05 && Math.random() < moved*1.6 && crumbs.length < 260){
+        crumbs.push({x:i*STEP + m.dir*rand(2,10), y:surf(i)-2, vx:m.dir*rand(30,120) + m.v*0.25, vy:-rand(70,230), s:rand(1.2,3.2), c:Math.random()<.6?'#5E4129':'#8A6440'});
+      }
+      if (moved > 0.02) g[i] = Math.max(0, g[i] - T.GRASS_LOSS*dt);
+    }
+  }
+
+  function step(dt, now){
+    if (build()) {}
+    clock += dt;
+    var speed = phoneish ? T.MACHINE_SPEED_PHONE : T.MACHINE_SPEED_DESK;
+    // where the machine wants to go
+    var target = null, rect = cv.getBoundingClientRect();
+    if (ptr.on){ ptr.x = flip ? rect.right - ptr.cx : ptr.cx - rect.left; target = ptr.x - m.dir*36*S*0.6; }
+    else if (!user.touched || clock - user.last > T.USER_IDLE){
+      if (ghost.wait > 0) ghost.wait -= dt;
+      else if (ghost.leg < ghost.path.length){
+        target = ghost.path[ghost.leg];
+        if (Math.abs(target - m.x) < 6){ ghost.leg++; ghost.wait = 0.35; }
+      }
+    }
+    var lo = wallW + 40*S, hi = W - 12*S, want = 0;
+    if (target !== null){ target = Math.max(lo, Math.min(hi, target)); want = Math.max(-speed, Math.min(speed, (target - m.x)*3.2)); }
+    m.v += (want - m.v)*Math.min(1, dt*5);
+    m.x = Math.max(lo, Math.min(hi, m.x + m.v*dt));
+    if (m.v > 14) m.dir = 1; else if (m.v < -14) m.dir = -1;
+    if (Math.abs(m.v) > 8) grade(m.x + m.dir*34*S, Math.min(1, Math.abs(m.v)/80), dt);
+
+    // grass, water
+    var graded = 0, total = 0;
+    for (var i = i0; i < N; i++){
+      total++;
+      if (Math.abs(r[i]) < T.GRADE_OK){ graded++; g[i] = Math.min(1, g[i] + T.GRASS_RATE*dt*(0.6+jit[i]*0.8)); }
+      else g[i] = Math.max(0, g[i] - 0.4*dt);
+      // blades lean away from the tracks and spring back
+      var dx = i*STEP - m.x, near = Math.abs(dx) < 46*S ? (1 - Math.abs(dx)/(46*S)) : 0;
+      var push = near*Math.sign(dx || 1)*Math.min(1, Math.abs(m.v)/60)*9;
+      bendV[i] += ((push - bend[i])*38 - bendV[i]*6.5)*dt; bend[i] += bendV[i]*dt;
+    }
+    var done = graded/total > 0.93 && Math.abs(m.v) < 5;
+    doneFor = done ? doneFor + dt : 0;
+    if (doneFor > T.RESET_AFTER && !ptr.on && fading === 0) fading = 0.001;
+    if (fading > 0){
+      fading += dt;
+      if (fading > 0.6 && fading - dt <= 0.6){ freshYard(); ghost.leg = 0; ghost.wait = 0.8; ghost.path = [m.x, wallW + 46*S, W - 18*S, W*0.66]; doneFor = 0; }
+      cv.style.opacity = fading < 0.6 ? 1 - fading/0.6 : Math.min(1, (fading-0.6)/0.6);
+      if (fading > 1.2){ fading = 0; cv.style.opacity = 1; }
+    }
+
+    // rain
+    var nd = T.RAIN*(W-wallW)/100*dt;
+    while (nd > 0){
+      if (Math.random() < nd){
+        var rx = rand(wallW+4, W), sx = flip ? W - rx : rx, top = Math.max(eaveY, 0);
+        if (flip && sx < copyR + 24) top = copyB + 10;
+        drops.push({x:rx, y:rand(top - 20, top + (base - top)*0.3), vy:rand(480,620)});
+      }
+      nd -= 1;
+    }
+    for (i = drops.length-1; i >= 0; i--){
+      var d = drops[i]; d.y += d.vy*dt;
+      var gy = groundAt(d.x) - w[colAt(d.x)];
+      if (d.y >= gy){ drops.splice(i,1); if (runners.length < 180) runners.push({x:d.x, vx:0, life:0}); }
+    }
+    // roof water out the downspout
+    if (Math.random() < dt*7 && runners.length < 180) runners.push({x:wallW + 16, vx:rand(40,80), life:0});
+    for (i = runners.length-1; i >= 0; i--){
+      var u = runners[i], c = colAt(u.x), sl = ((surf(c+1)-w[c+1]) - (surf(c-1)-w[c-1]))/(2*STEP);
+      u.vx = (u.vx + sl*700*dt)*Math.pow(0.35, dt); u.x += u.vx*dt; u.life += dt;
+      if (u.x >= W - 2){ runners.splice(i,1); continue; }
+      if (u.x < wallW + 2){ u.x = wallW + 2; u.vx = Math.abs(u.vx)*0.2; }
+      if ((Math.abs(u.vx) < 7 && u.life > 0.25) || u.life > 4){ w[colAt(u.x)] += T.DROP_VOL; runners.splice(i,1); }
+    }
+    settleWater(dt);
+    // flung dirt
+    for (i = crumbs.length-1; i >= 0; i--){
+      var k = crumbs[i]; k.vy += 900*dt; k.x += k.vx*dt; k.y += k.vy*dt;
+      if (k.vy > 0 && k.y >= groundAt(k.x)) crumbs.splice(i,1);
+    }
+    draw(now);
+  }
+
+  function draw(now){
+    ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,cv.width,cv.height);
+    if (flip) ctx.setTransform(-dpr,0,0,dpr,W*dpr,0); else ctx.setTransform(dpr,0,0,dpr,0,0);
+    var i, x;
+    // rain streaks (sky part only)
+    ctx.strokeStyle = 'rgba(90,120,145,.45)'; ctx.lineWidth = 1; ctx.beginPath();
+    for (i = 0; i < drops.length; i++){ ctx.moveTo(drops[i].x, drops[i].y); ctx.lineTo(drops[i].x - 1.5, drops[i].y - 11); }
+    ctx.stroke();
+
+    // soil body
+    ctx.beginPath(); ctx.moveTo(i0*STEP, surf(i0));
+    for (i = i0+1; i < N; i++) ctx.lineTo(i*STEP, surf(i));
+    ctx.lineTo(W, H); ctx.lineTo(wallW, H); ctx.lineTo(wallW, surf(i0)); ctx.closePath();
+    var gr = ctx.createLinearGradient(0, base-drop, 0, H);
+    gr.addColorStop(0, '#B07F51'); gr.addColorStop(1, '#8A6240');
+    ctx.fillStyle = gr; ctx.fill();
+    // rocky clay band (fixed in the ground)
+    ctx.save(); ctx.clip();
+    ctx.beginPath(); ctx.moveTo(wallW, base + 58);
+    for (x = wallW; x <= W+8; x += 8) ctx.lineTo(x, base + 58 + 6*Math.sin(x*0.013) + 4*Math.sin(x*0.041+2));
+    ctx.lineTo(W, H); ctx.lineTo(wallW, H); ctx.closePath(); ctx.fillStyle = '#7C5737'; ctx.fill();
+    for (i = 0; i < stones.length; i++){
+      var s = stones[i]; var c = colAt(s.x); if (s.y - s.ry < surf(c) + td[c]) continue;
+      ctx.fillStyle = s.sh < .5 ? '#8E8A80' : '#A39C8E'; ctx.beginPath(); ctx.ellipse(s.x, s.y, s.rx, s.ry, 0, 0, 6.283); ctx.fill();
+      ctx.fillStyle = 'rgba(40,28,18,.28)'; ctx.beginPath(); ctx.ellipse(s.x + s.rx*0.15, s.y + s.ry*0.35, s.rx*0.85, s.ry*0.6, 0, 0, 6.283); ctx.fill();
+    }
+    // topsoil follows the surface
+    ctx.beginPath(); ctx.moveTo(i0*STEP, surf(i0));
+    for (i = i0+1; i < N; i++) ctx.lineTo(i*STEP, surf(i));
+    for (i = N-1; i >= i0; i--) ctx.lineTo(i*STEP, surf(i) + td[i]);
+    ctx.closePath(); ctx.fillStyle = '#5E4129'; ctx.fill();
+    ctx.fillStyle = grain; ctx.fillRect(0, base - drop - 40, W, H);
+    ctx.restore();
+
+    // house wall: board-and-batten over a concrete foundation, downspout
+    var fy = tY[i0] - 14, top = Math.max(eaveY, 0), bat = flip ? 13 : 9;
+    ctx.fillStyle = '#2A3036'; ctx.fillRect(0, top, wallW, fy - top);
+    ctx.fillStyle = '#353C43'; for (x = 4; x < wallW - 2; x += bat) ctx.fillRect(x, top, 2.5, fy - top);
+    if (flip){
+      // window with white trim, like the house in their profile photo
+      var wx = wallW*0.24, ww = wallW*0.5, wy = eaveY + (fy - eaveY)*0.2, wh = (fy - eaveY)*0.42;
+      ctx.fillStyle = '#E4E5E1'; ctx.fillRect(wx - 7, wy - 7, ww + 14, wh + 14);
+      var gl = ctx.createLinearGradient(0, wy, 0, wy + wh); gl.addColorStop(0, '#9DB2BF'); gl.addColorStop(1, '#5F7482');
+      ctx.fillStyle = gl; ctx.fillRect(wx, wy, ww, wh);
+      ctx.fillStyle = '#E4E5E1'; ctx.fillRect(wx + ww/2 - 3, wy, 6, wh);
+      ctx.fillStyle = '#D5D6D1'; ctx.fillRect(wx - 11, wy + wh + 7, ww + 22, 6);
+      // roof edge, soffit and gutter
+      ctx.fillStyle = '#3B4148'; ctx.beginPath(); ctx.moveTo(wallW + 30, eaveY - 6); ctx.lineTo(wallW + 30, eaveY - 18); ctx.lineTo(0, eaveY - 18 - wallW*0.3); ctx.lineTo(0, eaveY - 6); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#23282D'; ctx.fillRect(0, eaveY - 8, wallW + 30, 10);
+      ctx.fillStyle = '#8E9295'; ctx.fillRect(wallW + 22, eaveY - 12, 12, 9);
+      ctx.beginPath(); ctx.moveTo(wallW + 24, eaveY - 4); ctx.lineTo(wallW + 31, eaveY - 4); ctx.lineTo(wallW + 8, eaveY + 22); ctx.lineTo(wallW + 1, eaveY + 22); ctx.closePath(); ctx.fill();
+    }
+    ctx.fillStyle = '#9C5A2E'; ctx.fillRect(0, fy - 5, wallW, 5);
+    ctx.fillStyle = '#ABA69D'; ctx.fillRect(0, fy, wallW, H - fy);
+    ctx.fillStyle = '#9C978D'; ctx.fillRect(0, H - Math.min(40, H*0.08), wallW + 8, H);
+    ctx.fillStyle = '#8E9295';
+    var dsx = wallW + 1, oy = tY[i0] - 6;
+    ctx.fillRect(dsx, flip ? eaveY + 18 : 0, 6, oy - 4 - (flip ? eaveY + 18 : 0));
+    ctx.beginPath(); ctx.moveTo(dsx, oy - 6); ctx.lineTo(dsx + 6, oy - 10); ctx.lineTo(dsx + 17, oy - 3); ctx.lineTo(dsx + 15, oy + 2); ctx.lineTo(dsx, oy - 4); ctx.closePath(); ctx.fill();
+
+    // water: puddles and runoff
+    ctx.fillStyle = 'rgba(70,122,165,.85)';
+    ctx.beginPath(); var open = false;
+    for (i = i0; i < N; i++){
+      if (w[i] > 0.35){
+        if (!open){ ctx.moveTo(i*STEP, surf(i)); open = i; }
+        ctx.lineTo(i*STEP, surf(i) - w[i]);
+      } else if (open !== false){
+        for (var j = i-1; j >= open; j--) ctx.lineTo(j*STEP, surf(j));
+        ctx.closePath(); open = false;
+      }
+    }
+    if (open !== false){ for (j = N-1; j >= open; j--) ctx.lineTo(j*STEP, surf(j)); ctx.closePath(); }
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(92,142,184,.75)'; ctx.lineWidth = 1.6; ctx.lineCap = 'round'; ctx.beginPath();
+    for (i = 0; i < runners.length; i++){
+      var u = runners[i], gy = groundAt(u.x) - w[colAt(u.x)] - 1, len = Math.max(3, Math.min(15, Math.abs(u.vx)*0.09));
+      ctx.moveTo(u.x - Math.sign(u.vx||1)*len, gy); ctx.lineTo(u.x, gy);
+    }
+    ctx.stroke();
+
+    // sod coming in
+    var t = now, cols = ['#3F7A2E','#4E8A3A','#5E9A44'];
+    ctx.lineWidth = phoneish ? 1.3 : 1.5;
+    for (var b = 0; b < 3; b++){
+      ctx.strokeStyle = cols[b]; ctx.beginPath();
+      for (i = i0 + b; i < N; i += 3){
+        if (g[i] < 0.04) continue;
+        var gx = i*STEP, gy0 = surf(i) - w[i]*0.2, hgt = (phoneish ? 10 : 13)*bh[i]*g[i];
+        for (var q = 0; q < 2; q++){
+          var bx = gx + (jit[i]*2 - 1 + q*1.4)*STEP*0.6;
+          var lean = Math.sin(t*1.9 + bx*0.045 + q) * 1.6 + Math.sin(t*0.7 + bx*0.011)*1.2 + bend[i];
+          ctx.moveTo(bx, gy0); ctx.quadraticCurveTo(bx + lean*0.25, gy0 - hgt*0.6, bx + lean, gy0 - hgt*(q ? 0.8 : 1));
+        }
+      }
+      ctx.stroke();
+    }
+    // dirt in the air
+    for (i = 0; i < crumbs.length; i++){ var k = crumbs[i]; ctx.fillStyle = k.c; ctx.fillRect(k.x, k.y, k.s, k.s); }
+
+    drawMachine();
+  }
+
+  function drawMachine(){
+    var back = m.x - m.dir*28*S, front = m.x + m.dir*22*S;
+    var yb = groundAt(back), yf = groundAt(front), y = (yb + yf)/2;
+    var ang = Math.atan2((yf - yb)*m.dir, 50*S);
+    ang = Math.max(-0.3, Math.min(0.3, ang)); m.ang += (ang - m.ang)*0.25;
+    ctx.save(); ctx.translate(m.x, y); ctx.scale(m.dir*S, S); ctx.rotate(m.ang*1);
+    // shadow
+    ctx.fillStyle = 'rgba(40,26,14,.28)'; ctx.beginPath(); ctx.ellipse(-3, 1, 32, 3.2, 0, 0, 6.283); ctx.fill();
+    // track
+    ctx.fillStyle = '#26282A'; rr(-31, -15, 55, 15, 7.5); ctx.fill();
+    ctx.fillStyle = '#4A4D50';
+    [-24, -14, -4, 6, 16].forEach(function(cx){ ctx.beginPath(); ctx.arc(cx, -7.5, cx === -24 || cx === 16 ? 5.2 : 3.4, 0, 6.283); ctx.fill(); });
+    ctx.fillStyle = '#6B6E70'; ctx.beginPath(); ctx.arc(-24, -7.5, 2, 0, 6.283); ctx.arc(16, -7.5, 2, 0, 6.283); ctx.fill();
+    // body
+    ctx.fillStyle = '#E8A912';
+    ctx.beginPath(); ctx.moveTo(-32, -15); ctx.lineTo(-33, -33); ctx.lineTo(-27, -39); ctx.lineTo(-16, -40); ctx.lineTo(-14, -15); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#C98F0B'; ctx.fillRect(-32, -21, 18, 6);
+    ctx.fillStyle = '#E8A912'; ctx.fillRect(-16, -22, 30, 7);
+    // cab cage + glass
+    ctx.fillStyle = '#2B2E31'; rr(-17, -56, 23, 35, 3); ctx.fill();
+    ctx.fillStyle = 'rgba(160,184,198,.55)'; rr(-14, -52, 17, 22, 2); ctx.fill();
+    ctx.strokeStyle = '#2B2E31'; ctx.lineWidth = 1.3; ctx.beginPath();
+    for (var gx = -10; gx < 3; gx += 4.2){ ctx.moveTo(gx, -52); ctx.lineTo(gx, -30); } ctx.stroke();
+    // lift arm
+    ctx.fillStyle = '#F2B417';
+    ctx.beginPath(); ctx.moveTo(-30, -38); ctx.lineTo(-22, -46); ctx.lineTo(10, -42); ctx.lineTo(27, -22); ctx.lineTo(21, -18); ctx.lineTo(6, -35); ctx.lineTo(-27, -33); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#C98F0B'; ctx.beginPath(); ctx.arc(-25, -38, 2.6, 0, 6.283); ctx.fill();
+    // bucket
+    ctx.fillStyle = '#3C3F42';
+    ctx.beginPath(); ctx.moveTo(21, -26); ctx.lineTo(28, -27); ctx.lineTo(35, -3); ctx.lineTo(36, 0); ctx.lineTo(22, 0); ctx.quadraticCurveTo(18, -12, 21, -26); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#5A5E62'; ctx.fillRect(23, -2, 13, 2);
+    ctx.restore();
+  }
+  function rr(x, y, w2, h2, rad){ ctx.beginPath(); ctx.moveTo(x+rad, y); ctx.arcTo(x+w2, y, x+w2, y+h2, rad); ctx.arcTo(x+w2, y+h2, x, y+h2, rad); ctx.arcTo(x, y+h2, x, y, rad); ctx.arcTo(x, y, x+w2, y, rad); ctx.closePath(); }
+
+  function userInput(cx, cy){
+    ptr.on = true; ptr.cx = cx; ptr.cy = cy; user.touched = true; user.last = clock;
+    ghost.leg = ghost.path.length;
+    if (hint) { hint.classList.add('gone'); }
+  }
+  cv.addEventListener('pointermove', function(e){ if (e.pointerType === 'mouse') userInput(e.clientX, e.clientY); });
+  cv.addEventListener('pointerleave', function(e){ if (e.pointerType === 'mouse') ptr.on = false; });
+  cv.addEventListener('pointerdown', function(e){ if (e.pointerType === 'mouse') e.preventDefault(); });
+  cv.addEventListener('touchstart', function(e){ var t = e.touches[0]; userInput(t.clientX, t.clientY); }, {passive:true});
+  cv.addEventListener('touchmove', function(e){ var t = e.touches[0]; e.preventDefault(); userInput(t.clientX, t.clientY); }, {passive:false});
+  cv.addEventListener('touchend', function(){ ptr.on = false; user.last = clock; });
+  if (window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches && hint) hint.textContent = 'Move across the yard to drive the skid steer';
+
+  yard.classList.add('live');
+  if (REDUCED){
+    if (hint) hint.remove();
+    var still = function(){ if (build() || true){ for (var k = 0; k < 90; k++){ drops.length = 0; } draw(0); } };
+    still(); window.addEventListener('resize', function(){ if (build()) draw(0); });
+    return;
+  }
+  build();
+  Loop.add(yard, {step: step});
+})();
+
+/* ---------- Sod strips between sections ---------- */
+(function(){
+  document.querySelectorAll('[data-sod]').forEach(function(el){
+    var cv = el.querySelector('canvas'), ctx = cv.getContext('2d'), W = 0, H = 0, dpr = 1, blades = [], line = [], px = -999, pv = 0, lastPx = -999;
+    var below = getComputedStyle(document.documentElement).getPropertyValue(el.dataset.sod === 'slate' ? '--slate' : '--ground').trim();
+    var overlay = el.classList.contains('gallery-turf');
+    function build(){
+      var r = cv.getBoundingClientRect(), nw = Math.round(r.width), nh = Math.round(r.height);
+      if (nw === W && nh === H) return false;
+      W = nw; H = nh; dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      cv.width = Math.round(W*dpr); cv.height = Math.round(H*dpr);
+      var p = Math.random()*6; line = [];
+      for (var x = 0; x <= W + 6; x += 6) line.push(H*0.56 + 2.2*Math.sin(x*0.009 + p) + 1.4*Math.sin(x*0.031 + p*2));
+      blades = []; var n = Math.round(W/2.6);
+      for (var i = 0; i < n; i++) blades.push({x:Math.random()*W, h:(H*0.42)*(0.55+Math.random()*0.6), c:i%3, ph:Math.random()*6, b:0, v:0});
+      return true;
+    }
+    function yAt(x){ var f = x/6, a = Math.min(line.length-2, Math.max(0, Math.floor(f))), u = f - a; return line[a]*(1-u) + line[a+1]*u; }
+    function draw(t, dt){
+      ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H);
+      var band = overlay ? 9 : 11;
+      // soil band, then the next section's color below it
+      ctx.beginPath(); ctx.moveTo(0, line[0]);
+      for (var i = 1; i < line.length; i++) ctx.lineTo(i*6, line[i]);
+      ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath(); ctx.fillStyle = '#5E4129'; ctx.fill();
+      ctx.beginPath(); ctx.moveTo(0, line[0] + band);
+      for (i = 1; i < line.length; i++) ctx.lineTo(i*6, line[i] + band + 1.5*Math.sin(i*1.7));
+      ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath(); ctx.fillStyle = below; ctx.fill();
+      var cols = ['#3F7A2E','#4E8A3A','#62A047'];
+      ctx.lineWidth = 1.5; ctx.lineCap = 'round';
+      for (var c = 0; c < 3; c++){
+        ctx.strokeStyle = cols[c]; ctx.beginPath();
+        for (i = 0; i < blades.length; i++){
+          var bl = blades[i]; if (bl.c !== c) continue;
+          if (dt){
+            var dx = bl.x - px, near = Math.abs(dx) < 60 ? 1 - Math.abs(dx)/60 : 0;
+            var push = near*(Math.sign(dx||1)*10 + pv*0.04);
+            bl.v += ((push - bl.b)*38 - bl.v*6.5)*dt; bl.b += bl.v*dt;
+          }
+          var y0 = yAt(bl.x) + 1, lean = Math.sin(t*1.8 + bl.x*0.04 + bl.ph)*2 + Math.sin(t*0.6 + bl.x*0.01)*1.5 + bl.b;
+          ctx.moveTo(bl.x, y0); ctx.quadraticCurveTo(bl.x + lean*0.3, y0 - bl.h*0.6, bl.x + lean, y0 - bl.h);
+        }
+        ctx.stroke();
+      }
+    }
+    function move(cx){ var r = cv.getBoundingClientRect(); var x = cx - r.left; pv = (x - (lastPx === -999 ? x : lastPx))*60; lastPx = x; px = x; }
+    el.style.pointerEvents = 'none';
+    window.addEventListener('pointermove', function(e){ var r = cv.getBoundingClientRect(); if (e.clientY > r.top - 40 && e.clientY < r.bottom + 40) move(e.clientX); else px = -999; }, {passive:true});
+    window.addEventListener('touchmove', function(e){ var t = e.touches[0], r = cv.getBoundingClientRect(); if (t.clientY > r.top - 50 && t.clientY < r.bottom + 50) move(t.clientX); }, {passive:true});
+    build();
+    if (REDUCED){ draw(0, 0); window.addEventListener('resize', function(){ if (build()) draw(0, 0); }); return; }
+    Loop.add(el, {step: function(dt, t){ build(); pv *= 0.9; draw(t, dt); }});
+  });
+})();
+
+/* ---------- Service rows pick the job in the form ---------- */
+(function(){
+  document.querySelectorAll('.row[data-job]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var job = a.dataset.job, inp = document.querySelector('input[name=job][value="' + job.replace(/"/g,'') + '"]');
+      if (inp) inp.checked = true;
+    });
+  });
+})();
+
+/* ---------- Quote form: compose the message, hand it off ---------- */
+(function(){
+  var form = document.getElementById('quote-form'), ready = document.getElementById('ready'), text = document.getElementById('ready-text');
+  var note = document.getElementById('ready-note'), send = document.getElementById('ready-send');
+  function setErr(id, msg){ var inp = document.getElementById(id), e = document.getElementById(id + '-err'); e.textContent = msg; inp.classList.toggle('invalid', !!msg); inp.setAttribute('aria-invalid', msg ? 'true' : 'false'); if (msg) inp.setAttribute('aria-describedby', id + '-err'); }
+  function copy(s){
+    try { if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(s).then(function(){ return true; }, function(){ return legacy(s); }); } catch(e){}
+    return Promise.resolve(legacy(s));
+  }
+  function legacy(s){ try { text.value = s; text.select(); return document.execCommand('copy'); } catch(e){ return false; } }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = form.elements, ok = true, digits = f.phone.value.replace(/\D/g,'');
+    setErr('q-name', f.name.value.trim() ? '' : 'Add your name so we know who we\'re talking to.'); if (!f.name.value.trim()) ok = false;
+    var pm = digits.length < 10 ? 'Add a phone number with area code so we can call you back.' : '';
+    setErr('q-phone', pm); if (pm) ok = false;
+    if (!ok){ form.querySelector('.invalid').focus(); return; }
+    var job = (form.querySelector('input[name=job]:checked') || {}).value;
+    var msg = 'Hi ' + BIZ.name + '! I\'d like a free consultation.' +
+      (job ? '\nJob: ' + job : '') +
+      '\nName: ' + f.name.value.trim() +
+      '\nPhone: ' + f.phone.value.trim() +
+      (f.where.value.trim() ? '\nWhere: ' + f.where.value.trim() : '') +
+      (f.notes.value.trim() ? '\nDetails: ' + f.notes.value.trim() : '');
+    text.value = msg;
+    if (BIZ.PHONE){
+      var d = BIZ.PHONE.replace(/\D/g,'').slice(-10);
+      send.href = 'sms:+1' + d + '?&body=' + encodeURIComponent(msg);
+      send.textContent = 'Send it as a text'; note.textContent = 'Tap below to open it in your texts, then hit send.';
+      ready.hidden = false; form.hidden = true; ready.focus(); return;
+    }
+    send.href = BIZ.messenger + '?text=' + encodeURIComponent(msg);
+    copy(msg).then(function(copied){
+      note.textContent = copied ? 'We copied it for you. Open Messenger, paste it in and hit send.' : 'Copy the message below, then open Messenger, paste it in and hit send.';
+      form.hidden = true; ready.hidden = false; ready.focus();
+    });
+  });
+  document.getElementById('ready-copy').addEventListener('click', function(){
+    var b = this; copy(text.value).then(function(c){ b.textContent = c ? 'Copied' : 'Select the text above to copy'; setTimeout(function(){ b.textContent = 'Copy message again'; }, 2200); });
+  });
+  ['q-name','q-phone'].forEach(function(id){ document.getElementById(id).addEventListener('input', function(){ if (this.classList.contains('invalid')) setErr(id, ''); }); });
+})();
+</script>
+</body>
+</html>
