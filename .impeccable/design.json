@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T07:49:06.956002+00:00",
+  "title": "Design System: True Custom Construction LLC",
+  "extensions": {
+    "colorMeta": {
+      "yellow": {
+        "role": "primary",
+        "displayName": "Construction Yellow",
+        "purpose": "Primary action fill and the skid steer.",
+        "tonalRamp": [
+          "#270000",
+          "#470E00",
+          "#672F00",
+          "#894F00",
+          "#AB7000",
+          "#CF9200",
+          "#F7B922",
+          "#FFE78D"
+        ]
+      },
+      "yellow-deep": {
+        "role": "primary",
+        "displayName": "Worn Yellow",
+        "purpose": "Primary hover."
+      },
+      "cedar": {
+        "role": "secondary",
+        "displayName": "Cedar",
+        "purpose": "Step numerals only.",
+        "tonalRamp": [
+          "#2A0000",
+          "#4A0500",
+          "#6C2800",
+          "#8E471A",
+          "#B2673C",
+          "#D6895D",
+          "#FFAE82",
+          "#FFD9AB"
+        ]
+      },
+      "focus": {
+        "role": "tertiary",
+        "displayName": "Water Blue",
+        "purpose": "Focus, edit-hover, and water in the scene.",
+        "tonalRamp": [
+          "#00003B",
+          "#00205B",
+          "#00407D",
+          "#1E5F9F",
+          "#4180C3",
+          "#62A3E7",
+          "#88C9FF",
+          "#B2F4FF"
+        ]
+      },
+      "sky-top": {
+        "role": "neutral",
+        "displayName": "Overcast Sky",
+        "purpose": "Hero gradient top; theme color.",
+        "tonalRamp": [
+          "#020D13",
+          "#18262E",
+          "#33424A",
+          "#506069",
+          "#708089",
+          "#90A1AB",
+          "#B5C7D1",
+          "#DFF2FC"
+        ]
+      },
+      "sky-low": {
+        "role": "neutral",
+        "displayName": "Low Overcast",
+        "purpose": "Hero gradient at 62%."
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Concrete Ground",
+        "purpose": "Page and light-section ground.",
+        "tonalRamp": [
+          "#0B0B09",
+          "#242421",
+          "#3F403D",
+          "#5D5E5B",
+          "#7D7E7A",
+          "#9E9F9B",
+          "#C4C5C1",
+          "#EEEFEB"
+        ]
+      },
+      "ground-2": {
+        "role": "neutral",
+        "displayName": "Poured Concrete",
+        "purpose": "Arrow chips, ready panel."
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Siding Slate",
+        "purpose": "Dark sections.",
+        "tonalRamp": [
+          "#020C15",
+          "#18262F",
+          "#33424C",
+          "#51606B",
+          "#70808C",
+          "#90A1AD",
+          "#B6C7D4",
+          "#DFF1FF"
+        ]
+      },
+      "slate-2": {
+        "role": "neutral",
+        "displayName": "Slate Raised",
+        "purpose": "Empty gallery frames."
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "purpose": "Text on light ground.",
+        "tonalRamp": [
+          "#030C13",
+          "#1A262E",
+          "#35424A",
+          "#526069",
+          "#718089",
+          "#92A1AB",
+          "#B7C7D1",
+          "#E1F1FC"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "purpose": "Ledes, step copy, muted labels."
+      },
+      "on-slate": {
+        "role": "neutral",
+        "displayName": "On-Slate",
+        "purpose": "Text on slate."
+      },
+      "on-slate-soft": {
+        "role": "neutral",
+        "displayName": "On-Slate Soft",
+        "purpose": "Muted text on slate."
+      },
+      "topsoil": {
+        "role": "world",
+        "displayName": "Topsoil",
+        "purpose": "Sod-strip soil band, yard surface layer.",
+        "tonalRamp": [
+          "#1B0400",
+          "#371D04",
+          "#553921",
+          "#75563E",
+          "#96765C",
+          "#B8977D",
+          "#DFBCA1",
+          "#FFE7CB"
+        ]
+      },
+      "clay": {
+        "role": "world",
+        "displayName": "Clay",
+        "purpose": "No-JS yard fallback.",
+        "tonalRamp": [
+          "#200000",
+          "#3E1800",
+          "#5D3503",
+          "#7D5328",
+          "#9F7348",
+          "#C29468",
+          "#EAB98D",
+          "#FFE4B6"
+        ]
+      },
+      "turf": {
+        "role": "world",
+        "displayName": "Turf",
+        "purpose": "Middle grass blade green.",
+        "tonalRamp": [
+          "#001400",
+          "#003000",
+          "#104E00",
+          "#336E1C",
+          "#538F3F",
+          "#74B160",
+          "#99D885",
+          "#C6FFB4"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "purpose": "Input and chip fill."
+      },
+      "field-stroke": {
+        "role": "neutral",
+        "displayName": "Field Stroke",
+        "purpose": "Resting control border."
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "purpose": "Service-row hairlines."
+      },
+      "rule-on-slate": {
+        "role": "neutral",
+        "displayName": "Rule on Slate",
+        "purpose": "Footer top border."
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error Red",
+        "purpose": "Field errors.",
+        "tonalRamp": [
+          "#370000",
+          "#5C0000",
+          "#810000",
+          "#A6291E",
+          "#CC4E3F",
+          "#F37160",
+          "#FF9884",
+          "#FFD0BF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only; uppercase, max 11ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s."
+      },
+      "row": {
+        "displayName": "Row",
+        "purpose": "Service-row links."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step and panel h3s."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Promise, quote lede, close copy."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, form labels, legends."
+      }
+    },
+    "shadows": [
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px rgba(47,111,176,.25)",
+        "purpose": "Input focus, chip keyboard focus, form button hover/focus."
+      },
+      {
+        "name": "scene-text-glow",
+        "value": "0 0 6px #4A3220, 0 0 14px #4A3220, 0 1px 2px #3A2616",
+        "purpose": "text-shadow for text set directly on the soil canvas only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": ".18s ease-out",
+        "purpose": "Button and arrow color changes."
+      },
+      {
+        "name": "field-state",
+        "value": ".15s ease-out",
+        "purpose": "Input and chip border/halo."
+      },
+      {
+        "name": "hint-fade",
+        "value": "opacity .5s ease-out",
+        "purpose": "Yard hint leaving on first input."
+      },
+      {
+        "name": "grass-spring",
+        "value": "k=38, damping=6.5",
+        "purpose": "Blade bend toward/away from pointer or machine, both canvases."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transitions off; canvases draw one still frame",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Gutter 32px, side-by-side hero buttons, 3-col gallery, yard leaves phoneish mode."
+      },
+      {
+        "name": "lg",
+        "value": "1024px",
+        "purpose": "Two-column services, 4-col gallery, sod 56px, hero yard goes full-bleed and mirrors."
+      }
+    ],
+    "canvas": {
+      "yardTunables": {
+        "STEP_PHONE": 4,
+        "STEP_DESK": 3,
+        "ROUGH": 0.075,
+        "GRADE_RATE": 6.5,
+        "GRADE_OK": 2.2,
+        "GRASS_RATE": 0.55,
+        "GRASS_LOSS": 2.4,
+        "RAIN": 13,
+        "DROP_VOL": 0.9,
+        "INFIL": 0.35,
+        "INFIL_GRASS": 2.2,
+        "MACHINE_SPEED_PHONE": 190,
+        "MACHINE_SPEED_DESK": 300,
+        "RESET_AFTER": 13,
+        "USER_IDLE": 9
+      },
+      "sceneColors": {
+        "soilBody": [
+          "#B07F51",
+          "#8A6240"
+        ],
+        "clayBand": "#7C5737",
+        "topsoil": "#5E4129",
+        "stones": [
+          "#8E8A80",
+          "#A39C8E"
+        ],
+        "wall": [
+          "#2A3036",
+          "#353C43"
+        ],
+        "foundation": "#ABA69D",
+        "sillTrim": "#9C5A2E",
+        "water": "rgba(70,122,165,.85)",
+        "rain": "rgba(78,102,124,.6)",
+        "turfYard": [
+          "#3F7A2E",
+          "#4E8A3A",
+          "#5E9A44"
+        ],
+        "turfSod": [
+          "#3F7A2E",
+          "#4E8A3A",
+          "#62A047"
+        ],
+        "machine": [
+          "#F2B417",
+          "#E8A912",
+          "#C98F0B",
+          "#26292C"
+        ]
+      },
+      "switches": {
+        "BIZ.PHONE": "empty = Messenger-only, 'Phone coming soon'; set = tel: links in header/footer and SMS hand-off"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Yellow action, full width on phones.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Ask for a free consultation</a>",
+      "css": ".ds-btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border:2px solid var(--ink,#1F2B33);border-radius:10px;font:800 17px/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .18s ease-out,color .18s ease-out,border-color .18s ease-out;max-width:440px}.ds-btn-primary{background:var(--yellow,#F2B417);color:var(--ink,#1F2B33)}.ds-btn-primary:hover{background:var(--yellow-deep,#DDA00A)}.ds-btn:focus-visible{outline:3px solid #2F6FB0;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action; inverts to ink on hover.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Get a free quote</a>",
+      "css": ".ds-btn-ghost{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 22px;border:2px solid #1F2B33;border-radius:10px;background:transparent;color:#1F2B33;font:800 17px/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;text-decoration:none;transition:background-color .18s ease-out,color .18s ease-out;max-width:440px}.ds-btn-ghost:hover{background:#1F2B33;color:#ECEDE9}.ds-btn-ghost:focus-visible{outline:3px solid #2F6FB0;outline-offset:3px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row-arrow",
+      "description": "Uppercase link row between hairlines; only the arrow reacts.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\">Sod prep<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li></ul>",
+      "css": ".ds-rows{list-style:none;margin:0;padding:0;border-top:1px solid #C5CBC6;background:#ECEDE9;color:#1F2B33}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;padding:12px 0;border-bottom:1px solid #C5CBC6;text-decoration:none;color:inherit;font:900 30px/1.05 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:-.01em;outline:none}.ds-arrow{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#DFE2DD;transition:background-color .18s ease-out}.ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:#F2B417}.ds-row:focus-visible .ds-arrow{outline:3px solid #2F6FB0;outline-offset:3px}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Field with water-blue focus halo.",
+      "html": "<label class=\"ds-label\">Your name<input class=\"ds-input\" type=\"text\"></label>",
+      "css": ".ds-label{display:grid;gap:7px;font:800 16px/1.3 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1F2B33}.ds-input{font:16px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1F2B33;background:#FBFCFA;border:2px solid #8C958F;border-radius:10px;padding:14px;min-height:54px;transition:border-color .15s ease-out,box-shadow .15s ease-out}.ds-input:hover{border-color:#2F6FB0}.ds-input:focus{outline:none;border-color:#2F6FB0;box-shadow:0 0 0 3px rgba(47,111,176,.25)}"
+    },
+    {
+      "name": "Job Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Radio chip; selected inverts to ink.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"j\" checked><span>Sod prep</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"j\"><span>Remodel</span></label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px}.ds-chip span{display:flex;align-items:center;min-height:48px;padding:0 16px;border:2px solid #8C958F;border-radius:10px;background:#FBFCFA;color:#1F2B33;font-weight:700;cursor:pointer;transition:border-color .15s ease-out,background-color .15s ease-out}.ds-chip:hover span{border-color:#2F6FB0}.ds-chip input:focus-visible+span{border-color:#2F6FB0;box-shadow:0 0 0 3px rgba(47,111,176,.25)}.ds-chip input:checked+span{background:#1F2B33;border-color:#1F2B33;color:#ECEDE9}"
+    },
+    {
+      "name": "Step",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Cedar numeral beside an uppercase title and soft body.",
+      "html": "<div class=\"ds-step\"><span class=\"ds-n\">2</span><h3>We come look, free</h3><p>We walk it with you and tell you straight what it needs.</p></div>",
+      "css": ".ds-step{display:grid;grid-template-columns:44px 1fr;gap:4px 14px;font:400 17px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1F2B33}.ds-n{grid-row:span 2;font-weight:900;font-size:40px;line-height:.9;color:#9A5226}.ds-step h3{margin:0;font-size:20px;line-height:1.15;font-weight:900;text-transform:uppercase;padding-top:2px}.ds-step p{margin:0;color:#4A5763}"
+    },
+    {
+      "name": "Sod Strip (static)",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Section seam: soil band over the next ground. Live version is canvas-drawn grass.",
+      "html": "<div class=\"ds-sod\"></div>",
+      "css": ".ds-sod{height:46px;background:linear-gradient(180deg,#ECEDE9 0 50%,#4E8A3A 50% 56%,#5E4129 56% 80%,#22303A 80%)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Soil Cutaway",
+    "overview": "A yard crew's site drawn as a cross-section of the job: overcast sky, topsoil over rocky clay, a dark board-and-batten wall, and their yellow tracked skid steer. Light concrete sections and charcoal-blue slate sections alternate, stitched by live sod strips. Heavy uppercase system sans names things; sentence case speaks. Surfaces are flat; the canvases carry all depth.",
+    "keyCharacteristics": [
+      "Two grounds: concrete and slate, joined by sod strips",
+      "Heavy uppercase system-sans display, sentence-case body",
+      "Yellow reserved for primary action and the machine",
+      "Flat UI; shadows only for focus",
+      "Two canvas scenes carry the world"
+    ],
+    "rules": [
+      {
+        "name": "The Machine Yellow Rule",
+        "body": "Yellow is the machine and the primary action; never a band, heading color, or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Grounds Rule",
+        "body": "Every section is concrete or slate; no third section color, no black ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Soil Stays Underground Rule",
+        "body": "Topsoil, clay and turf live in canvases and sod strips, not UI components.",
+        "section": "colors"
+      },
+      {
+        "name": "The Names Shout, Sentences Talk Rule",
+        "body": "Uppercase 900 for headings, service rows and the wordmark; everything else sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Balanced Heading Rule",
+        "body": "Headings use text-wrap: balance and line-height of 1 or less.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "UI is flat at rest; shadows mean focus or belong to the drawn world.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do alternate concrete and slate with a sod strip at every change.",
+      "Do keep controls 48px or taller (buttons 56, inputs 54, chips 48).",
+      "Do use water blue for every focus and edit-hover signal.",
+      "Do keep canvas tuning in T and business facts in BIZ.",
+      "Do give every canvas a reduced-motion still and a no-JS fallback."
+    ],
+    "donts": [
+      "Don't use yellow beyond the primary action and the machine.",
+      "Don't add resting shadows, UI gradients, a third section color, or a black ground.",
+      "Don't uppercase body copy, buttons or labels.",
+      "Don't reuse the wordmark's tracked subline as an eyebrow above headings.",
+      "Don't add hover backgrounds to service rows.",
+      "Don't put rain or animation over the desktop hero copy column."
+    ]
+  }
+}
