@@ -19,7 +19,7 @@
 - **Messenger link:** `m.me/<page id>` should open their page's Messenger. The `?text=` prefill is a best effort; Messenger often ignores it, so the copy-and-paste step is the real path.
 
 ## Placeholders and gaps
-- **Phone: none published.** The header and footer show "Phone coming soon" (see `BIZ.PHONE`).
+- **Phone: none published.** The header's top-right shows "Phone coming soon" as plain text. The footer shows no phone until `BIZ.PHONE` is set.
 - **Email: none.** There's no footer email line; add one when known (footer only).
 - **Service area:** unknown, so there's no area section. The video's dry hills and the Western States Cat dealer decal suggest the inland Northwest, but I didn't use that.
 - No logo: the wordmark is set in the site's lettering, and the favicon and home-screen icon are a "TC" monogram (`apple-touch-icon.png`).
@@ -35,6 +35,7 @@
 - Licensed/insured? Years in business?
 
 ## Ideas not built (yours to pick)
+- **Headline alternative** (from the finish review): "Built right from the dirt up." is close to a stock phrase. The reviewer suggested "Rain runs away from your house.", which matches the hero's story but undersells remodels. Your call.
 - **Runner-up world:** sod rolls. A strip of sod unrolls across the hero under your finger, seams knitting together, with the section edges as rolled sod. Other worlds I considered: topographic contour lines that flatten under touch, skid-steer track prints laid by the pointer, a string line and grade stakes, and a remodel framing/blueprint world.
 - A before/after slider once they send a "before" of a yard.
 - Show the dump truck in the hero (dropping a load of topsoil on the first touch). Their video frames of it were too blurry to use as a photo.
@@ -43,6 +44,8 @@
 - An area line in the footer once the towns are known (plain text, never pills).
 
 ## Not verified
+- **Is `profile.php?id=61585918380470` a Page or a personal profile?** If it's a personal profile, `m.me/<id>` may not open a chat, and that would break every contact button (hero, form, close). Test it on a phone before sending the link.
+- The large desktop work-01 tile is about 1.5x upscaled: the source video is only 720px wide. Phone sizes are sharp.
 - Real-device touch (iOS Safari and Facebook's in-app browser), frame rate on older phones.
 - That `m.me/61585918380470` opens the right Messenger thread in the app.
 - Whether clipboard copy works inside Facebook's in-app browser (there's a visible fallback either way).

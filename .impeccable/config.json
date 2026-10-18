@@ -14,6 +14,18 @@
         "value": "<ul> \"rows\": children flush against border-top on top (no inset)",
         "createdAt": "2026-10-18T07:43:09.364Z",
         "reason": "Service list rule line: rows carry 12px vertical padding; the top border is a list divider, not a container edge"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "1.1:1 (need 4.5:1) — text #fbf3e8 on #e9eae4",
+        "createdAt": "2026-10-18T07:46:15.294Z",
+        "reason": "Yard hint sits on the dark soil canvas, not the sky gradient the detector samples; checked visually on the 390px render"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "zero-offset text-shadow glow (#4a3220)",
+        "createdAt": "2026-10-18T07:46:15.382Z",
+        "reason": "finishing-rules.md sanctions a soft glow in the ground color to keep text readable over the scene; the glow is soil brown, not an accent"
       }
     ]
   }
