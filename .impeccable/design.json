@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-18T07:49:06.956002+00:00",
+  "generatedAt": "2026-10-19T22:43:20.053398+00:00",
   "title": "Design System: True Custom Construction LLC",
   "extensions": {
     "colorMeta": {
@@ -223,6 +223,16 @@
           "#FF9884",
           "#FFD0BF"
         ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder Gray",
+        "purpose": "Form placeholder text on the light ground (4.5:1 on white)."
+      },
+      "hint-on-soil": {
+        "role": "neutral",
+        "displayName": "Hint Cream",
+        "purpose": "The yard drag hint, set on the soil band with a soil-brown glow."
       }
     },
     "typographyMeta": {
