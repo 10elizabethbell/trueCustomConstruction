@@ -50,10 +50,8 @@
 - Self-host Cal Sans to drop the Google Fonts chain (the sweep suggested it). The skill allows Google Fonts.
 - Hide the form when JS is off.
 
-## Not done yet (usage limit hit)
-- **DESIGN.md and `.impeccable/design.json` still describe the OLD build.** Regenerate them with `impeccable-documenter`.
-- No final Impeccable re-sweep after the last fixes.
-- The orchestrator's done mark (`trueCustomConstruction.revamp-done`) was not touched.
+## Docs
+- `DESIGN.md` and `.impeccable/design.json` were regenerated from the calm build (2026-10-20); the detector shows no design-system findings. Its two remaining findings (hero padding, band texture) are waived in `.impeccable/config.json`.
 
 ## Not verified
 - Whether `m.me/61585918380470` opens a chat (it may be a personal profile, not a Page). Test on a phone first.

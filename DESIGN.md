@@ -1,325 +1,421 @@
 ---
 name: True Custom Construction LLC
-description: A yard crew's one-page site built as a soil cutaway under an overcast sky.
+description: A grading-and-remodel crew's one-page site in calm full-bleed bands of paper, slate navy and deep slate, with one Cat-machine yellow.
 colors:
-  yellow: "#F2B417"
-  yellow-deep: "#DDA00A"
-  cedar: "#9A5226"
-  focus: "#2F6FB0"
-  sky-top: "#C4D6E0"
-  sky-low: "#E9EAE4"
-  ground: "#ECEDE9"
-  ground-2: "#DFE2DD"
-  slate: "#22303A"
-  slate-2: "#2C3C48"
-  ink: "#1F2B33"
-  ink-soft: "#4A5763"
-  on-slate: "#EEF1F2"
-  on-slate-soft: "#BAC5CD"
-  topsoil: "#5E4129"
-  clay: "#A4774C"
-  turf: "#4E8A3A"
-  field: "#FBFCFA"
-  field-stroke: "#8C958F"
-  rule: "#C5CBC6"
-  rule-on-slate: "#3A4B57"
-  error: "#A3261B"
-  placeholder: "#5F6970"
-  hint-on-soil: "#FBF3E8"
+  yellow: "#f5bf1d"
+  yellow-2: "#ffd04d"
+  yellow-ink: "#7d5800"
+  navy: "#22384f"
+  deep: "#142233"
+  focus: "#2f5f93"
+  paper: "#f4f6fb"
+  card: "#ffffff"
+  field: "#e6ecf5"
+  figure-ground: "#dfe5ee"
+  ink: "#142233"
+  body: "#2a3747"
+  soft: "#4b5868"
+  on-dark: "#f4f7fb"
+  on-dark-soft: "#c8d3e0"
+  line: "rgba(20,34,51,.12)"
+  error: "#b3261e"
+  facebook-blue: "#1877f2"
 typography:
   display:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(44px, 12.4vw, 96px)"
-    fontWeight: 900
-    lineHeight: 0.92
-    letterSpacing: "-0.01em"
-  headline:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(34px, 8vw, 64px)"
-    fontWeight: 900
-    lineHeight: 1
-    letterSpacing: "-0.01em"
-  row:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(25px, 6.6vw, 34px)"
-    fontWeight: 900
-    lineHeight: 1.05
-    letterSpacing: "-0.01em"
-  title:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "20px"
-    fontWeight: 900
-    lineHeight: 1.15
-  lede:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(17px, 2vw, 20px)"
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(44px, 12.4vw, 84px)"
     fontWeight: 400
-    lineHeight: 1.45
-  body:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    lineHeight: 1.02
+    letterSpacing: "-0.005em"
+  display-wide:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(52px, 7.2vw, 84px)"
+    fontWeight: 400
+    lineHeight: 1.02
+    letterSpacing: "-0.005em"
+  headline:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(30px, 7.6vw, 48px)"
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: "-0.005em"
+  row:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(24px, 6.6vw, 30px)"
+    fontWeight: 400
+    lineHeight: 1.1
+  title:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "21px"
+    fontWeight: 400
+    lineHeight: 1.2
+  label:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
     fontSize: "17px"
     fontWeight: 400
-    lineHeight: 1.55
-  label:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "16px"
-    fontWeight: 800
     lineHeight: 1.2
-  numeral:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "40px"
-    fontWeight: 900
-    lineHeight: 0.9
-  panel-title:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "22px"
-    fontWeight: 900
+  button:
+    fontFamily: "Cal Sans, Avenir Next, Segoe UI, system-ui, sans-serif"
+    fontSize: "18px"
+    fontWeight: 400
     lineHeight: 1
-  wordmark:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "21px"
-    fontWeight: 900
-    lineHeight: 1
-  wordmark-sub:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "11px"
-    fontWeight: 700
-    lineHeight: 1
-    letterSpacing: "0.2em"
-  hint:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-    fontSize: "15px"
-    fontWeight: 800
-    lineHeight: 1.4
-  small:
-    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+  lede:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(17px, 4.6vw, 19px)"
+    fontWeight: 400
+    lineHeight: 1.7
+  promise:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(17px, 4.7vw, 20px)"
+    fontWeight: 400
+    lineHeight: 1.5
+  body:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.7
+  eyebrow:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
     fontSize: "14px"
+    fontWeight: 500
+    lineHeight: 1
+    letterSpacing: "0.02em"
+  wordmark-sub:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif"
+    fontSize: "11px"
     fontWeight: 600
-    lineHeight: 1.4
+    lineHeight: 1
+    letterSpacing: "0.08em"
+  scale:
+    s11: "11px"
+    s14: "14px"
+    s15: "15px"
+    s16: "16px"
+    s17: "17px"
+    s18: "18px"
+    s19: "19px"
+    s20: "20px"
+    s21: "21px"
+    s22: "22px"
+    s24: "24px"
+    s30: "30px"
+    s44: "44px"
+    s48: "48px"
+    s52: "52px"
+    s84: "84px"
 rounded:
-  focus: "4px"
-  control: "10px"
-  photo: "8px"
-  pill: "50%"
+  focus: "6px"
+  field: "10px"
+  fb-row: "20px"
+  card: "24px"
+  circle: "50%"
+  pill: "999px"
 spacing:
-  gutter-phone: "20px"
-  gutter: "32px"
-  stack: "22px"
-  section-phone: "56px"
-  section-desk: "88px"
-  gallery-gap: "10px"
+  gutter: "20px"
+  gutter-wide: "40px"
+  stack-sm: "12px"
+  stack-md: "16px"
+  stack-lg: "20px"
+  stack-xl: "28px"
+  card-pad: "clamp(20px, 5vw, 32px)"
+  band: "64px"
+  band-wide: "96px"
 components:
   button-primary:
     backgroundColor: "{colors.yellow}"
     textColor: "{colors.ink}"
-    typography: "{typography.label}"
-    rounded: "{rounded.control}"
-    padding: "0 22px"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "0 26px"
     height: "56px"
   button-primary-hover:
-    backgroundColor: "{colors.yellow-deep}"
+    backgroundColor: "{colors.yellow-2}"
+    textColor: "{colors.ink}"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.control}"
-    padding: "0 22px"
-    height: "56px"
-  button-ghost-hover:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.ground}"
-  button-ghost-on-slate:
-    backgroundColor: "transparent"
-    textColor: "{colors.on-slate}"
-  button-ghost-on-slate-hover:
-    backgroundColor: "{colors.on-slate}"
-    textColor: "{colors.slate}"
-  service-row-arrow:
-    backgroundColor: "{colors.ground-2}"
-    textColor: "{colors.ink}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    size: "46px"
-  service-row-arrow-hover:
+    padding: "0 26px"
+    height: "56px"
+  button-line:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    typography: "{typography.button}"
+    rounded: "{rounded.pill}"
+    padding: "0 26px"
+    height: "56px"
+  eyebrow:
+    backgroundColor: "rgba(20,34,51,.06)"
+    textColor: "{colors.ink}"
+    typography: "{typography.eyebrow}"
+    rounded: "{rounded.pill}"
+    padding: "9px 14px"
+  eyebrow-on-dark:
+    backgroundColor: "rgba(255,255,255,.12)"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.eyebrow}"
+    rounded: "{rounded.pill}"
+    padding: "9px 14px"
+  service-row:
+    textColor: "{colors.ink}"
+    typography: "{typography.row}"
+    padding: "12px 0"
+    height: "76px"
+  arrow-circle:
+    backgroundColor: "rgba(20,34,51,.07)"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.circle}"
+    size: "44px"
+  arrow-circle-hover:
     backgroundColor: "{colors.yellow}"
-  input:
+    textColor: "{colors.ink}"
+  step-number:
+    backgroundColor: "{colors.yellow}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.circle}"
+    size: "48px"
+  work-figure:
+    backgroundColor: "{colors.figure-ground}"
+    rounded: "{rounded.card}"
+  fb-row:
+    backgroundColor: "{colors.card}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.fb-row}"
+    padding: "14px 16px 14px 22px"
+    height: "76px"
+  form-card:
+    backgroundColor: "{colors.card}"
+    textColor: "{colors.body}"
+    rounded: "{rounded.card}"
+    padding: "{spacing.card-pad}"
+    width: "600px"
+  input-field:
     backgroundColor: "{colors.field}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.control}"
-    padding: "14px"
-    height: "54px"
+    typography: "{typography.body}"
+    rounded: "{rounded.field}"
+    padding: "13px 14px"
+    height: "52px"
   chip:
     backgroundColor: "{colors.field}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.control}"
-    padding: "0 16px"
+    rounded: "{rounded.pill}"
+    padding: "0 18px"
     height: "48px"
   chip-selected:
     backgroundColor: "{colors.ink}"
-    textColor: "{colors.ground}"
-  ready-panel:
-    backgroundColor: "{colors.ground-2}"
-    rounded: "{rounded.control}"
-    padding: "20px"
+    textColor: "{colors.card}"
+  header:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    height: "64px"
+  footer:
+    backgroundColor: "{colors.deep}"
+    textColor: "{colors.on-dark-soft}"
+    padding: "48px 0 96px"
+  float-circle:
+    backgroundColor: "{colors.yellow}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.circle}"
+    size: "60px"
 ---
 
 # Design System: True Custom Construction LLC
 
 ## Overview
 
-**Creative North Star: "The Soil Cutaway"**
+**Creative North Star: "The Crew's Own Yard"**
 
-The site is a cross-section of a job: overcast sky on top, topsoil over rocky clay below, a dark board-and-batten wall at the edge, and the crew's yellow tracked skid steer doing the work. Every page surface borrows from that cutaway. Light limestone-concrete ground carries the reading sections; charcoal-blue slate, the color of the house siding, carries the photo and closing sections; strips of live sod over a soil band stitch one to the other.
+The site is the crew's own world laid out in calm, full-bleed bands: off-white paper, the slate navy and deep slate of the dark board-and-batten house on their Facebook profile, and one warm yellow taken from the Cat 279D loader in their job video. It is Ellie's calm band style (after lpmr.co.uk) applied to a grading-and-remodel crew. Bands alternate light and dark so each section begins plainly, and the only photograph that leads is their own machine on a yard they graded.
 
-The type is a plain system sans, set heavy and uppercase for anything that names a thing, sentence-case for everything a person reads. Surfaces are flat. Depth comes only from the canvas scenes and from color blocks changing under a sod edge. Yellow is the machine's color and the primary action's color, nothing else.
+Density is low and phone-first. Each band holds one heading, one short idea, and at most one action group. Shapes are soft and borderless: 24px cards, full pills, tinted fields with no stroke. Depth comes from the bands and from tint, not from shadow; only two things lift off the page, the Facebook row and the floating message circle.
 
-Density is phone-first and generous: 56px tap targets, full-width stacked buttons on phones, one column until 1024px.
+Motion is limited to three moves. The hero H1 bounces in letter by letter. Everything that starts below the first screen fades up 12px. The message circle slides in once the hero has gone. All three switch off under reduced motion.
 
 **Key Characteristics:**
-- Two grounds only: light concrete and charcoal-blue slate, alternating, joined by sod strips.
-- Heavy uppercase system-sans display; sentence-case body.
-- Construction yellow reserved for the primary action and the machine.
-- Flat surfaces; no shadows except focus halos and the canvas machine's ground shadow.
-- Two canvas scenes (hero yard, sod strips) carry the world; everything else is quiet.
+- Paper, two slate navies, one yellow. The ground is never black.
+- Yellow is a fill. When yellow has to be text on a light ground it becomes Yellow Ink.
+- One display face (Cal Sans, weight 400) for every heading, row, label and button. Body text is the system stack at 16/1.7.
+- Soft, borderless forms: 24px cards, 999px pills, 10px tinted fields, 50% circles.
+- On the service rows and the Facebook row, only the arrow circle reacts to hover.
 
 ## Colors
 
-An earth-and-weather palette: neutral concrete and siding blue-grey, one hot yellow, soil browns and turf green confined to the drawn scenes.
+The palette is cool and quiet: a blue-tinted paper, two slate navies from the client's house, and one saturated machine yellow that carries every primary action.
 
 ### Primary
-- **Construction Yellow** (yellow): primary button fill, the skid steer's body, `::selection`, hovered service-row arrow. Deepens to **Worn Yellow** (yellow-deep) on hover.
+- **Cat-Machine Yellow** (yellow): the one warm accent. It fills primary buttons, step numbers, the eyebrow dot, the arrow circle on hover, the floating message circle and `::selection`. On dark bands and in the hero it is also the colour of the accent phrase and the focus ring. Text on it is always Slate Ink.
+- **Lit Yellow** (yellow-2): primary-button hover fill only.
+- **Yellow Ink** (yellow-ink): yellow used as text or icon on a light ground: the accent phrase on paper and the header phone icon and hover. It passes 4.5:1 on paper, which the yellow does not.
 
 ### Secondary
-- **Cedar** (cedar): the numerals in "How it goes" only. The house's cedar trim; it marks sequence, never action.
+- **Board-and-Batten Navy** (navy): the hero band (under the photo on phones) and the quote-form band. It is also the input caret colour.
+- **Deep Slate** (deep): the "How it goes" band and the footer, always with the faint 135° line texture (`repeating-linear-gradient(135deg, transparent 0 22px, rgba(255,255,255,.035) 22px 23px)`).
 
 ### Tertiary
-- **Water Blue** (focus): every focus outline, input and chip hover/focus border, and the 3px focus halo at 25% alpha. It is also the puddle and runoff color in the yard canvas (drawn as rgba(70,122,165,.85)), so "blue means water and attention."
+- **Field Blue** (focus): hover and focus outlines on form controls, and every focus ring on light grounds. It is kept apart from the yellow so a focused field never looks like a primary button.
 
 ### Neutral
-- **Overcast Sky** (sky-top to sky-low): hero gradient, top to 62%; sky-top is also the browser theme color.
-- **Concrete Ground** (ground): page background and light section ground.
-- **Poured Concrete** (ground-2): resting service-row arrow, ready-to-send panel.
-- **Siding Slate** (slate): dark sections (Our work, Close, footer). **Slate Raised** (slate-2) fills empty gallery frames.
-- **Ink** (ink) / **Ink Soft** (ink-soft): text on light ground; soft for ledes, step copy, optional markers, wordmark subline.
-- **On-Slate** (on-slate) / **On-Slate Soft** (on-slate-soft): text on slate; soft for close copy and footer.
-- **Field** (field) / **Field Stroke** (field-stroke): input and chip fill and 2px resting border.
-- **Rule** (rule): 1px hairlines between service rows. **Rule on Slate** (rule-on-slate): footer top border.
-- **Error Red** (error): field error text and invalid border.
-
-### World colors (canvas only)
-- **Topsoil** (topsoil): soil band in every sod strip and the yard's surface layer. **Clay** (clay): the static no-JS yard fallback. **Turf** (turf): middle of the three-green blade set (#3F7A2E / #4E8A3A / #5E9A44 in the yard, #62A047 as the light blade in sod strips).
+- **Cool Paper** (paper): page ground, header, the light bands, and the theme colour.
+- **Card White** (card): the form card, the ready panel, the Facebook row, the selected-chip text and the hero H1.
+- **Field Tint** (field): inputs and unselected chips on the white form card. It is a separate token because paper on white is about 1.08:1 and fails non-text contrast.
+- **Photo Ground** (figure-ground): what a work figure shows while its photo loads.
+- **Slate Ink** (ink): headings and text on yellow. As translucent tints it also makes the eyebrow fill (6%), the arrow-circle rest fill (7%), the Facebook-row shadow (7%), the row dividers (12%), the line-button stroke (35%) and the hero overlay (40 to 86%).
+- **Running Text** (body): paragraphs on light grounds.
+- **Quiet Text** (soft): ledes, the wordmark sub-line, the "Phone coming soon" slot, field hints, placeholders and helper notes.
+- **On Dark** (on-dark): headings, ghost-button text and footer links on navy and deep bands. At 70% it is the ghost-button stroke.
+- **On Dark Soft** (on-dark-soft): running text on navy and deep bands.
+- **Divider** (line): 1px rules between service rows.
+- **Error Red** (error): inline error text and the bad-field border.
+- **Facebook Blue** (facebook-blue): the Facebook glyph on the "see more of our work" row only. It is a brand mark, not a palette colour.
 
 ### Named Rules
-**The Machine Yellow Rule.** Yellow is the machine and the primary action. It never becomes a background band, a heading color, or decoration.
+**The Fill-Only Yellow Rule.** Yellow is never text on a light ground. Use it for fills and for accents on navy or deep slate; on paper or white the same role uses Yellow Ink.
 
-**The Two Grounds Rule.** A section is either concrete (ground) or slate. No third section color, and no black page ground.
+**The Two Focus Colours Rule.** Focus rings are Field Blue on light grounds and Yellow on navy, deep slate, the hero and the footer. Form controls inside the navy band are back on a white card, so they use Field Blue.
 
-**The Soil Stays Underground Rule.** Topsoil, clay, and turf live inside canvas scenes and sod strips. They don't fill UI components.
+**The Never-Black Rule.** The darkest ground is Deep Slate. No band, overlay or panel goes to black.
 
 ## Typography
 
-**Display Font:** system sans stack (-apple-system, Segoe UI, Roboto, Helvetica Neue, Arial)
-**Body Font:** same stack
+**Display Font:** Cal Sans (with Avenir Next, Segoe UI, system-ui)
+**Body Font:** the system stack (-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial)
 
-**Character:** One family, two voices. Black-weight (900) uppercase with slightly tight tracking (-0.01em) for names of things; regular sentence case for speech. The system stack is a deliberate house style: native and fast in Facebook's in-app browser, and it reads like painted lettering on a work truck.
+**Character:** Cal Sans is a rounded, friendly geometric display face. At weight 400 and tight leading it reads confident without shouting. The system body keeps the page fast in Facebook's in-app browser on cellular.
 
 ### Hierarchy
-- **Display** (900, clamp 44-96px, 0.92, uppercase, max 11ch): the hero headline only.
-- **Headline** (900, clamp 34-64px, 1.0, uppercase): every section h2.
-- **Row** (900, clamp 25-34px, 1.05, uppercase): service rows. These are links styled as large type.
-- **Title** (900, 20-22px, 1.15, uppercase): step titles, the ready panel heading.
-- **Numeral** (900, 40px, 0.9, cedar): step numbers.
-- **Lede** (400, clamp 17-20px, 1.45, ink-soft or on-slate-soft, 36-40ch): the hero promise, quote lede, close copy.
-- **Body** (400, 17px, 1.55): default text.
-- **Label** (800, 16-17px): buttons, form labels, legends, the header phone link. Chips use 700; optional markers use 500 in ink-soft.
+- **Display** (400, clamp(44px, 12.4vw, 84px) on phones, clamp(52px, 7.2vw, 84px) from 760px, line-height 1.02, max 11ch): the hero H1 only, in white, with its last phrase in the accent.
+- **Headline** (400, clamp(30px, 7.6vw, 48px), 1.08, -0.005em, balanced wrap): every section H2.
+- **Row** (400, clamp(24px, 6.6vw, 30px), 1.1): service rows. The Facebook row is a smaller step at clamp(19px, 5.2vw, 22px) / 1.2.
+- **Title** (400, 21px, 1.2; 22px from 1024px): step titles. The ready-panel H3 is 24px. The wordmark is 21px (24px from 760px).
+- **Label** (400, 17px, 1.2): form labels and legends, in the display face.
+- **Button** (400, 18px, 1): every pill button, in the display face. The header phone number uses the display face at 17px (20px from 760px).
+- **Promise / Lede** (400, clamp(17px, 4.7vw, 20px) / 1.5 and clamp(17px, 4.6vw, 19px) / 1.7): the hero promise (max 30ch, 34ch from 760px) and section ledes (max 38ch). The closing line is clamp(18px, 5vw, 20px).
+- **Body** (400, 16px, 1.7): running text, inputs, chips and the footer. Step text stops at 60ch.
+- **Small** (15px): inline errors and the note under the form button. Field hints such as "(optional)" are 14px.
+- **Eyebrow** (500, 14px, 1, 0.02em): eyebrow pills only.
+- **Wordmark sub-line** (600, 11px, 0.08em, uppercase): "Construction LLC" under the wordmark, the only uppercase text.
 
 ### Named Rules
-**The Names Shout, Sentences Talk Rule.** Uppercase 900 is for h1-h3, service rows, and the wordmark. Paragraphs, labels, buttons, and errors stay sentence case.
+**The One Display Face Rule.** Every heading, row, label, button, step number and phone number is Cal Sans 400. Nothing is set bolder than 400 in the display face, and there is no second webfont.
 
-**The Balanced Heading Rule.** All headings use `text-wrap: balance` and line-height of 1 or less.
+**The Sixteen-Floor Rule.** Inputs, textareas and chips are 16px or larger so iOS never zooms on focus.
 
 ## Layout
 
-A single centered column, max width 1180px, with a gutter of 20px on phones and 32px from 640px up. Sections stack vertically. Light sections are padded 56px top / 64px bottom on phones and 88px / 96px from 1024px. Slate sections use their own padding (work 40/64, close 48/40).
+The page is a single column of full-bleed bands inside a 1160px max wrap. The side gutter is 20px on phones and 40px from 760px. Bands are padded 64px on phones and 96px from 760px. The hero has no band padding; its copy column carries its own.
 
-- **Phone (<640px):** everything stacks. Buttons are full width and capped at 440px. The gallery is a 2-column grid; the lead photo spans both columns.
-- **640px+:** hero buttons sit side by side at auto width; the gallery goes to 3 columns.
-- **1024px+:** services and steps sit side by side (1.1fr / 1fr, 88px gap). The gallery goes to 4 columns with 300px rows, and the lead photo spans 2x2. The quote column caps at 760px. The footer becomes a 3-part row. The hero yard canvas moves behind the copy (see Components).
-- **Rhythm:** about 22px from a heading to its content; 10-14px between sibling controls; 26px between steps and before the gallery.
-- **Safe areas:** the viewport uses `viewport-fit=cover`, and the footer pads by `env(safe-area-inset-bottom)`.
+Band order: paper header, hero (navy under the photo), Services on paper, How it goes on deep slate, Our work on paper, the quote form on navy, Close on paper, footer on deep slate.
+
+Breakpoints:
+- **Below 380px:** chips tighten to 14px side padding.
+- **760px:** wider gutter and band padding. The hero becomes two columns, copy beside the photo card. The work grid goes to four columns, and the Facebook row stops at 520px.
+- **760px to 1099px:** the hero buttons stay stacked at full width, because the copy column is too narrow for two pills side by side.
+- **1024px:** wider hero columns (1.15fr / 0.85fr, 56px gap). Services becomes a two-column split. The form band puts a sticky heading beside the card. Steps sit in three columns. The close band puts the heading and the button side by side.
+
+Spacing rhythm: 12, 16, 20 and 28px gaps inside groups; 24 to 40px between steps; 28 to 36px from a heading to its list.
 
 ## Elevation & Depth
 
-Flat. No surface has a resting shadow. Depth comes from the drawn scenes (soil strata, the house wall, the machine with a soft ellipse shadow at rgba(40,26,14,.28)) and from a section's color changing under a sod edge.
+The system is flat. Depth comes from the alternation of the bands, from the 135° line texture on the dark bands and the hero, and from translucent ink tints. There are exactly two shadows. Neither is a hard offset shadow, and neither changes on hover.
 
 ### Shadow Vocabulary
-- **Focus halo** (`box-shadow: 0 0 0 3px rgba(47,111,176,.25)`): inputs on focus, chips on keyboard focus, form buttons on hover/focus. A state signal, not elevation.
-- **Scene-text glow** (`text-shadow: 0 0 6px #4A3220, 0 0 14px #4A3220, 0 1px 2px #3A2616`): only for text set directly on the soil canvas (the yard hint). It is soil-colored, not an accent.
+- **Row lift** (`box-shadow: 0 8px 24px rgba(20,34,51,.07)`): the white Facebook row on paper, so it reads as a tappable slab.
+- **Float lift** (`box-shadow: 0 10px 28px rgba(8,18,32,.3)`): the floating message circle, which sits over every band.
 
 ### Named Rules
-**The Flat Surface Rule.** UI is flat at rest. Shadows mean focus, or they belong to the drawn world.
+**The Flat Bands Rule.** Cards, figures, form controls and buttons carry no shadow. A new surface separates itself by band or tint, not by lift.
 
 ## Shapes
 
-One gentle radius (10px) for every control and panel: buttons, inputs, chips, the ready panel. Photos use a slightly tighter 8px with overflow clipped. The only circle is the 46px service-row arrow. Borders are 2px on controls (ink, yellow, field-stroke, or on-slate) and 1px for hairline rules. The global focus outline is 3px solid water blue at 3px offset with a 4px radius.
+The form language is soft and borderless:
+- **Cards** (24px): the form card, the ready panel, work figures and the hero photo from 760px.
+- **Facebook row** (20px).
+- **Fields** (10px): inputs and textareas.
+- **Pills** (999px): buttons, chips and eyebrows.
+- **Circles** (50%): the arrow circles, step numbers, the eyebrow dot and the floating circle.
+- **Focus outline** (6px): the radius of the global focus outline.
 
-The one organic silhouette is the sod edge: a wavy soil line (two summed sines) with grass blades above. Everything else is rectilinear.
+Strokes appear in only three places: the transparent 2px button and field border that changes colour on state, the 1px row divider, and the line button's 35% ink stroke. Photos always use `object-fit: cover` and are never stretched.
 
 ## Components
 
 ### Buttons
-Big, flat, full-bleed on phones.
-- **Shape:** 10px radius, 2px ink border, min-height 56px, 22px side padding, 800 weight, optional 22px leading inline SVG.
-- **Primary:** yellow fill, ink text, ink border. Hover: yellow-deep.
-- **Ghost:** transparent with an ink border; inverts to an ink fill with ground-colored text on hover.
-- **On slate:** primary keeps a yellow border; ghost becomes on-slate text and border and inverts to on-slate fill with slate text.
-- **In forms:** hover/focus adds a water-blue border and the focus halo.
-- **Transition:** background, color, and border at .18s ease-out. Removed under reduced motion.
+Every button is a confident, full pill.
+- **Shape:** full pill (999px), at least 56px tall, 26px side padding, display face at 18px, optional 20px icon with a 10px gap.
+- **Primary:** yellow fill and border with Slate Ink text. It is the hero message button, the close button and every form submit. Inside the form card and the ready panel it is full width.
+- **Ghost:** transparent with On Dark text and a 70% On Dark 2px stroke. Hero only.
+- **Line:** transparent with Slate Ink text and a 35% ink stroke. It is the ready panel's secondary action.
+- **Hover (pointer devices only):** primary goes to Lit Yellow; ghost goes to a white stroke on a 10% white wash; line goes to a full ink stroke. Form buttons also gain a 2px Field Blue outline.
+- **Press:** scale 0.98 over 0.12s.
+- **Focus:** a 3px outline at a 3px offset (yellow on dark grounds); 2px Field Blue at a 2px offset inside the form.
 
-### Service rows
-The service list is a stack of big uppercase links between 1px rule hairlines, min-height 76px. Each row ends in a 46px round arrow chip (ground-2) that turns yellow on hover/focus. Row hover never adds a background; only the arrow responds. Keyboard focus outlines the arrow, not the row. Clicking a row preselects the matching job chip in the quote form.
-
-### Steps
-A two-column grid (44px numeral column). The 900-weight cedar numeral spans the title and body lines; titles use the uppercase Title style; body text is ink-soft.
+### Eyebrow pills
+A quiet label above the hero H1 and a few section headings, never on every heading. It is a 14px pill with a 7px yellow dot, a 6% ink fill on paper or a 12% white fill on dark, and 9px 14px padding. It is marked up as a `<p>`, has no hover state, arrow or shadow, and never uses a full yellow fill. This is Ellie's recorded exception in the calm band style; keep it to the hero and at most one or two section heads.
 
 ### Chips
-- **Style:** visually hidden radio and a visible span. Min-height 48px, 16px padding, 2px field-stroke border, field fill, 700 weight, 10px radius.
-- **State:** hover gives a water-blue border; keyboard focus adds the halo; selected becomes an ink fill with ground text. A selected chip that is hovered or focused gets a water-blue border.
+- **Style:** Field Tint fill, 2px transparent border, 999px radius, at least 48px tall, 18px side padding, 16px system text.
+- **State:** hover gives a Field Blue border. Selected is an ink fill with white text. Keyboard focus is a 3px Field Blue outline at a 3px offset, so focus stays visible on the ink fill.
+
+### Cards / Containers
+- **Corner Style:** 24px.
+- **Background:** Card White on the navy band.
+- **Shadow Strategy:** none (see Flat Bands).
+- **Border:** none.
+- **Internal Padding:** clamp(20px, 5vw, 32px), with a 20px gap between fields, max 600px wide.
+- **Ready panel:** replaces the form after submit and uses the same card. It holds a 24px H3, a 150px read-only textarea, a full-width primary "Open Messenger" button and a line "Copy message again" button.
 
 ### Inputs / Fields
-- **Style:** field fill, 2px field-stroke border, 10px radius, 14px padding, min-height 54px (textarea 120px, vertical resize), 16px text so iOS doesn't zoom. Placeholder #5F6970.
-- **Hover / Focus:** water-blue border; focus adds the halo, with no outline.
-- **Error:** error-red border and a 15px/600 error message below. The message is hidden when empty, and it clears on input.
-- **Labels:** 800 weight above the field. "(optional)" is marked in 500 ink-soft.
+- **Style:** Field Tint fill, 2px transparent border, 10px radius, 13px 14px padding, at least 52px tall (textareas 120px), 16px text, navy caret, Quiet Text placeholders.
+- **Focus:** the border turns Field Blue, with no glow. Hover does the same on pointer devices.
+- **Error:** a plain-sentence error in Error Red at 15px under the field, and an Error Red border. The error rule is more specific than the focus rule so the red border survives focus.
 
-### Ready panel
-The form hands off to a ground-2 panel (10px radius, 20px padding) holding a read-only composed message and two stacked buttons. When BIZ.PHONE is set, the send button becomes an SMS link; otherwise it opens Messenger and copies the message to the clipboard.
+### Navigation
+- **Header:** a paper bar, 64px tall (76px from 760px), with the top padding respecting the safe area. The wordmark is on the left: "True Custom" in the display face over an 11px uppercase "Construction LLC". The phone slot is on the right. Until the owner gives a number it reads "Phone coming soon" in 14px Quiet Text. Once CONFIG.PHONE is set it becomes a display-face tel link with a Yellow Ink phone icon. There is no menu.
+- **Footer:** deep slate with the line texture, On Dark Soft text, and links in On Dark at least 44px tall that turn yellow on hover. The bottom padding (96px plus the safe area) clears the floating circle.
 
-### Header
-A minimal top bar with no nav. The wordmark is two lines: "True Custom" in 900 uppercase at 21px over "Construction LLC" in 700 uppercase at 11px, tracked .2em, in ink-soft. This is a logo lockup, not a reusable label style. A phone slot sits on the right: a muted "Phone coming soon" (600, 14px) until BIZ.PHONE is set, then an 800-weight tel: link. The footer phone appears the same way.
+### Hero
+On phones, their Cat 279D photo fills the navy band under a top-to-bottom ink overlay (86%, then 82% at 58%, then 40%). The copy sits over it: eyebrow, H1, promise and two buttons, stacked full width. From 760px the overlay is gone and the photo becomes a 24px 4:5 card (max 440px wide, max 600px tall) beside the copy on the textured navy band.
 
-### Sod strip divider (signature)
-A 46px band (56px at 1024px+) placed between sections of different ground. The canvas draws a wavy topsoil band, 11px thick, over the next section's color, read live from `--slate` or `--ground` via `data-sod`. The strip's own background matches the section above. About W/2.4 blades in three greens, clumped by a low-frequency "lushness" field, sway on two sines and spring away from a nearby pointer (spring 38, damping 6.5). A variant (`gallery-turf`, 9px band, transparent background) overlaps the bottom of the gallery by 26px so the photos stand on turf. Strips are `aria-hidden`, ignore pointer events, and draw one static frame under reduced motion.
+### Service rows
+Each row is the whole link: the service name in the Row style, at least 76px tall, with a 1px divider between rows. A 44px arrow circle sits at the right end. On hover the arrow circle alone fills yellow; the row has no background, underline or shadow change. On focus the arrow fills yellow and takes a Field Blue outline. Tapping a row preselects the matching chip in the form.
 
-### Hero yard canvas (signature)
-An interactive soil cutaway that fills the bottom of the hero. Drag (touch) or hover-move (mouse) to drive the skid steer: its bucket levels lumps, flung dirt crumbs arc off, sod grows back on graded columns, and rain runs off the new slope instead of pooling at the foundation. The scene shows topsoil over a gradient clay body with a rocky band and stones, a board-and-batten wall with a concrete foundation and downspout, and on wide screens a window, eave, and gutter. When no one is driving, a ghost path drives itself. A finished lawn holds for RESET_AFTER seconds, then cross-fades to a new yard.
-- **Tunables (the `T` object):** STEP_PHONE / STEP_DESK (px per ground column, 4/3), ROUGH, GRADE_RATE 6.5, GRADE_OK 2.2px, GRASS_RATE .55, GRASS_LOSS 2.4, RAIN 13 drops/s per 100px, DROP_VOL, INFIL, INFIL_GRASS, MACHINE_SPEED_PHONE/DESK 190/300, RESET_AFTER 13s, USER_IDLE 9s. Tune the feel here, not in the draw code.
-- **Responsive:** below 640px ("phoneish") it uses a 58px wall, machine scale 1.1, and smaller lumps. At 1024px and up ("flip") the canvas goes full-bleed behind the hero copy and the whole scene is mirrored, so the house sits on the right and the copy keeps the left. The wall widens to 21% of width (230-380px). The ground line drops below the buttons, and rain spawns below the copy block so it never streaks across the text. Copy stays clickable through `pointer-events` passthrough. Machine scale is 1.25 below 1100px and 1.5 above. DPR is capped at 1.5.
-- **Hint:** "Drag to drive the skid steer" (or "Move across the yard…" for fine pointers). 15px/800 cream on the soil, using the scene-text glow. It sits bottom-right on phones and bottom-left on desktop, and fades on first input.
-- **Fallbacks:** without JS, a CSS gradient still shows topsoil and clay bands. Under reduced motion, one static frame is drawn and the hint is removed. Both canvases pause offscreen through a shared IntersectionObserver loop.
-- **BIZ.PHONE:** one config switch. Empty means the header shows "Phone coming soon", the footer hides the number, and the form hands off to Messenger. Filled means tel: links in the header and footer and an SMS hand-off.
+### Numbered steps
+An ordered list on deep slate. Each step has a 48px yellow circle with its number in the display face at 20px, a title in On Dark, and a sentence in On Dark Soft. It is one column on phones and three from 1024px.
+
+### Work grid
+4:5 figures with a 24px radius on a Photo Ground fill, with no captions and no overlays. On phones the grid has two columns and a full-width lead image. From 760px it has four columns, and the lead spans two by two. Images cannot be dragged or selected.
+
+### Facebook row
+A white 20px slab, at least 76px tall, with the row shadow. It holds a 30px Facebook-blue glyph, a display-face line, and the same arrow circle as the service rows, which again is the only thing that reacts to hover.
+
+### Floating message circle
+A 60px yellow circle fixed at the bottom right, inside the safe area, with a Messenger icon (a chat icon once a phone number is set). It slides up from 120px below over 0.35s cubic-bezier(.2,.8,.2,1) once the hero has left the screen. It hides again while the form or the closing button is in view. When hidden it is out of the tab order and aria-hidden. It is one circle, never a bottom bar.
+
+### Motion
+- **H1 bounce-in:** the hero H1 only. JS splits it into letters, keeping nested accent spans and wrapping each word in a nowrap span. Each letter moves from 50px right at opacity 0 to rest over 1s cubic-bezier(.34,1.56,.64,1), 20ms apart. The split waits for Cal Sans to load (capped at 800ms). An early `.hold` class hides the H1 until the split, so the heading never flashes plain; a 1.6s timeout releases `.hold` regardless. When the last letter lands, the original HTML is restored.
+- **Fade-up:** only `.rise` elements that start below the first screen get `.below`. They rise 12px and fade in over 0.4s ease-out as they enter. Everything is visible at rest and without JS.
+- **Reduced motion:** no split, no hold, no rise, no float or button transitions, and no smooth scroll. The plain heading shows at once.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** alternate concrete and slate sections and put a sod strip at every change (`sod--to-slate` on ground, `sod--to-ground` on slate).
-- **Do** keep every control at least 48px tall (buttons 56px, inputs 54px, chips 48px), with tap targets of 44px or more for links.
-- **Do** use water blue for every focus and hover-to-edit signal: a 3px outline, or a border plus the 25% halo.
-- **Do** keep canvas tuning in `T` and business facts in `BIZ`. Read section colors from `:root` tokens, not literals.
-- **Do** give every canvas a reduced-motion still frame and a no-JS fallback.
+- **Do** keep the band rhythm: paper, then navy or deep slate, then paper. The deep bands and the hero carry the 135° line texture at 3.5% white.
+- **Do** put text on yellow in Slate Ink, and switch yellow-as-text on light grounds to Yellow Ink.
+- **Do** set every heading, row, label and button in Cal Sans 400, and body text in the system stack at 16/1.7.
+- **Do** use the radii: 24px cards, 20px Facebook row, 10px fields, 999px pills, 50% circles.
+- **Do** give form controls Field Tint on the white card and a Field Blue border on hover and focus.
+- **Do** let only the arrow circle react on link rows.
+- **Do** gate hover styles behind `(hover:hover)` so taps never leave them stuck on.
+- **Do** keep tap targets at least 44px (buttons 56px, chips 48px, fields 52px).
 
 ### Don't:
-- **Don't** use yellow for anything but the primary action and the machine.
-- **Don't** add resting shadows, gradients on UI surfaces, or a third section color. Don't use a black page ground.
-- **Don't** set body copy, buttons, or labels in uppercase. Uppercase 900 is for names: headings, rows, the wordmark.
-- **Don't** reuse the wordmark's tracked small-caps subline as a section label or eyebrow above headings.
-- **Don't** add hover backgrounds to service rows; the arrow is the only affordance.
-- **Don't** put rain, glare, or animated elements over the hero copy column on desktop.
+- **Don't** use yellow as text on paper or white, or white text on yellow.
+- **Don't** go to a black ground; Deep Slate is the floor.
+- **Don't** add shadows to cards, figures, fields or buttons. The Facebook row and the floating circle are the only lifted things.
+- **Don't** add a second webfont or set Cal Sans above 400.
+- **Don't** animate any heading other than the hero H1. Don't hide content at rest; only below-the-fold elements wait for the fade-up.
+- **Don't** stretch a photo or blow the tall hero frame across a wide band; from 760px it is a card beside the copy.
+- **Don't** add a bottom contact bar; the floating message circle is the only fixed control.
+- **Don't** put eyebrows on every heading, give them hover or arrows, or fill them with full yellow.
