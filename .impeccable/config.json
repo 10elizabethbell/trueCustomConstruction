@@ -26,6 +26,18 @@
         "value": "zero-offset text-shadow glow (#4a3220)",
         "createdAt": "2026-10-18T07:46:15.382Z",
         "reason": "finishing-rules.md sanctions a soft glow in the ground color to keep text readable over the scene; the glow is soil brown, not an accent"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<section> \"hero\": children flush against bg on top/bottom (no inset)",
+        "createdAt": "2026-10-20T02:36:24.274Z",
+        "reason": "False positive: hero section padding is 0 by design; its .hero-copy child carries 56-96px top and 88-140px bottom padding"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "repeating-gradient decorative stripes",
+        "createdAt": "2026-10-20T02:36:24.335Z",
+        "reason": "Ellie's pitch-site calm-photo-style.md (2026-10-19): the faint 135deg band texture is a chosen house feature"
       }
     ]
   }

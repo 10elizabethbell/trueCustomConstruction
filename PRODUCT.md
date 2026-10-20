@@ -29,10 +29,10 @@ A crew that brings its own heavy equipment to the job (tracked Cat 279D skid ste
 - No black page ground. No demo/sample wording.
 
 ## Evidence on hand
-- One 44-second job-site video (Facebook group post, 2026-10-18): graded yard, drainage riser by the foundation, Cat 279D tracked skid steer, white dump truck. Four stills cropped from it (faces and bystanders cropped out).
+- One 44-second job-site video (Facebook group post, 2026-10-18): graded yard, drainage riser by the foundation, Cat 279D tracked skid steer, white dump truck. Five stills cropped from it (faces and bystanders cropped out); one full 720x1280 frame of the Cat 279D is the hero photo.
 - Facebook profile photo (house), used as a work photo — *inferred* to be their build.
 
 ## Principles
 1. Honest over impressive: every claim traces to the brief or their own post.
 2. Phone first; the first screen shows what they do and how to ask.
-3. Let the visitor do the job: the hero lets you grade the dirt yourself.
+3. Calm and plain (Ellie's calm band style, 2026-10-19): their own machine on their own job in the hero, short service items, one easy way to ask. The earlier drag-to-grade hero is opt-in now (git history).
