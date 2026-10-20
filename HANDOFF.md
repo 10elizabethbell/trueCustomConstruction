@@ -54,6 +54,6 @@
 - `DESIGN.md` and `.impeccable/design.json` were regenerated from the calm build (2026-10-20); the detector shows no design-system findings. Its two remaining findings (hero padding, band texture) are waived in `.impeccable/config.json`.
 
 ## Not verified
-- Whether `m.me/61585918380470` opens a chat (it may be a personal profile, not a Page). Test on a phone first.
+- Whether `m.me/61585918380470` opens a chat on a real phone. On 2026-10-20 it redirected (302) to `m.facebook.com/msg/…`, which is the good sign (a dead profile ID gives a 200 with no redirect), but nobody has tapped it yet.
 - Clipboard copy and the hand-off inside Facebook's in-app browser.
 - Real-device iOS and Android.
