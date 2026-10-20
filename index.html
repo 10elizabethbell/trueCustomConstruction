@@ -20,6 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap">
 <link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
+<script>/* hold the hero H1 until it is split for the bounce-in, so it never flashes plain first; released by a timeout no matter what */
+(function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('hold');setTimeout(function(){d.classList.remove('hold')},1600)}})(document.documentElement);</script>
 <style>
 /* ---------- Tokens ---------- */
 :root{
@@ -95,16 +97,17 @@ section{padding:64px 0}
 .brand span{font:600 11px/1 var(--text);letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
 .tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font:400 17px/1 var(--display);text-decoration:none;white-space:nowrap}
 .tel svg{width:18px;height:18px;flex:none;color:var(--yellow-ink)}
-.tel.soon{font:500 14px/1.2 var(--text);color:var(--soft);white-space:normal;text-align:right;max-width:9em}
+.tel.soon{font:500 14px/1.2 var(--text);color:var(--soft)}
 
 /* ---------- Hero: their own job photo under a navy overlay ---------- */
 .hero{padding:0;position:relative;background-color:var(--navy);background-image:var(--texture);color:var(--on-dark);overflow:hidden;isolation:isolate}
 .hero-photo{position:absolute;inset:0;z-index:-1;margin:0}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,34,51,.86) 0%,rgba(20,34,51,.82) 62%,rgba(20,34,51,.58) 100%)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,34,51,.86) 0%,rgba(20,34,51,.82) 58%,rgba(20,34,51,.4) 100%)}
 .hero-copy{position:relative;display:grid;gap:20px;justify-items:start;padding-top:56px;padding-bottom:140px}
 .hero h1{color:#fff;font-size:clamp(44px,12.4vw,84px);line-height:1.02;max-width:11ch}
 /* H1 bounce-in (after lpmr.co.uk): each letter slides in from 50px right with a slight overshoot, 20ms apart */
+.hold .hero h1{opacity:0}
 .hero h1 .w{display:inline-block;white-space:nowrap}
 .hero h1 .c{display:inline-block;opacity:0;transform:translateX(50px);animation:letter-in 1s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i) * 20ms)}
 @keyframes letter-in{to{opacity:1;transform:none}}
@@ -125,16 +128,17 @@ section{padding:64px 0}
 .steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}
 .steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--ink);font:400 20px/1 var(--display)}
 .steps b{display:block;font:400 21px/1.2 var(--display);color:var(--on-dark);margin-top:4px}
-.steps span{display:block;margin-top:4px}
+.steps span{display:block;margin-top:4px;max-width:60ch}
 
 /* ---------- Work photos ---------- */
 .shots{margin:32px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .shots figure{margin:0;border-radius:var(--r-card);overflow:hidden;background:#dfe5ee;aspect-ratio:4/5}
 .shots figure.big{grid-column:1/-1}
 .shots img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
-.fb{margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px;padding:14px 16px 14px 22px;border-radius:20px;background:var(--card);color:var(--ink);text-decoration:none;font:400 clamp(19px,5.2vw,22px)/1.2 var(--display);box-shadow:0 1px 0 var(--line)}
+.fb{margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px;padding:14px 16px 14px 22px;border-radius:20px;background:var(--card);color:var(--ink);text-decoration:none;font:400 clamp(19px,5.2vw,22px)/1.2 var(--display);box-shadow:0 8px 24px rgba(20,34,51,.07)}
 .fb:hover,.fb:focus-visible{outline:none;background:var(--card)}
 .fb .lbl{display:flex;align-items:center;gap:14px}
+.fb .t{text-wrap:balance}
 .fb .lbl svg{width:30px;height:30px;flex:none;color:#1877f2}
 .fb:focus-visible .arrow{background:var(--yellow);outline:3px solid var(--focus);outline-offset:3px}
 
@@ -192,7 +196,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
   .top .wrap{min-height:76px}
   .brand b{font-size:24px}
   .tel{font-size:20px}
-  .tel.soon{font-size:15px;max-width:none}
+  .tel.soon{font-size:15px}
   section{padding:96px 0}
   .hero-copy{padding-top:96px;padding-bottom:112px}
   .promise{max-width:34ch}
@@ -202,13 +206,23 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
   .shots figure.big{grid-column:span 2;grid-row:span 2}
   .fb{max-width:520px}
 }
-/* desktop hero: the tall phone-video frame can't fill a wide band without blowing up, so it sits beside the copy as a card */
-@media (min-width:1024px){
-  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-  .hero-copy{padding-top:88px;padding-bottom:88px}
-  .hero-photo{position:relative;inset:auto;z-index:auto;margin:56px 0;border-radius:var(--r-card);overflow:hidden;aspect-ratio:4/5;max-height:600px;justify-self:end;width:100%;max-width:440px}
+/* tablet and desktop hero: the tall phone-video frame can't fill a wide band without blowing up, so it sits beside the copy as a card */
+@media (min-width:760px){
+  .hero .wrap{display:grid;grid-template-columns:1fr minmax(240px,.8fr);gap:40px;align-items:center}
+  .hero-copy{padding-top:72px;padding-bottom:72px}
+  .hero h1{font-size:clamp(52px,7.2vw,84px)}
+  .hero-photo{position:relative;inset:auto;z-index:auto;margin:48px 0;border-radius:var(--r-card);overflow:hidden;aspect-ratio:4/5;max-height:600px;justify-self:end;width:100%;max-width:440px}
   .hero-photo img{object-position:50% 55%}
   .hero-photo::after{display:none}
+}
+@media (min-width:760px) and (max-width:1099px){
+  .hero .actions{grid-auto-flow:row;width:100%}
+  .hero .actions .btn{min-width:0}
+}
+@media (min-width:1024px){
+  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:56px}
+  .hero-copy{padding-top:88px;padding-bottom:88px}
+  .hero-photo{margin:56px 0}
   .split{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:start}
   .split .rows{margin-top:0}
   .ask .wrap{grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
@@ -265,28 +279,28 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="hero" id="hero" aria-labelledby="h1">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Free consultation</span>
+      <p class="eyebrow">Free consultation</p>
       <h1 id="h1">Graded right. <span class="accent">Built right.</span></h1>
       <p class="promise">We work your yard and your home like they're our own, and we tell you straight what they need.</p>
       <div class="actions">
         <a class="btn btn-primary" data-msg href="https://m.me/61585918380470"><svg aria-hidden="true"><use href="#i-msgr"/></svg><span data-msg-label>Message us on Facebook</span></a>
-        <a class="btn btn-ghost" href="#quote">Get a free quote</a>
+        <a class="btn btn-ghost" href="#quote">Tell us about the job</a>
       </div>
     </div>
-    <figure class="hero-photo"><img src="img/hero.webp" width="720" height="1280" alt="" fetchpriority="high" decoding="async" draggable="false"></figure>
+    <figure class="hero-photo"><img src="img/hero.webp" width="720" height="1280" alt="Their yellow Cat 279D track loader on a freshly graded yard" fetchpriority="high" decoding="async" draggable="false"></figure>
   </div>
 </section>
 
 <section class="on-paper" id="services" aria-labelledby="h-services">
   <div class="wrap split">
     <div class="head rise">
-      <span class="eyebrow">What we do</span>
-      <h2 id="h-services">From the dirt to the <span class="accent">last board.</span></h2>
+      <p class="eyebrow">What we do</p>
+      <h2 id="h-services">From the dirt to the last board.</h2>
     </div>
     <ul class="rows">
-      <li class="rise"><a class="row" href="#quote" data-job="Grading &amp; drainage">Grading &amp; drainage<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#quote" data-job="Sod prep">Sod prep<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
-      <li class="rise"><a class="row" href="#quote" data-job="Remodel">Remodels<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li class="rise"><a class="row" href="#quote" data-job="Grading &amp; drainage">Grading &amp; drainage<span class="sr-only">, ask us about it</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li class="rise"><a class="row" href="#quote" data-job="Sod prep">Sod prep<span class="sr-only">, ask us about it</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
+      <li class="rise"><a class="row" href="#quote" data-job="Remodel">Remodels<span class="sr-only">, ask us about it</span><span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
     </ul>
   </div>
 </section>
@@ -296,7 +310,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <h2 id="h-how" class="rise">How it <span class="accent">goes.</span></h2>
     <ol class="steps">
       <li class="rise"><div><b>Tell us what's going on.</b><span>Water sitting by the foundation, a lawn that needs starting over, a room you want redone.</span></div></li>
-      <li class="rise"><div><b>We come look, free.</b><span>We walk it with you and tell you straight what it needs.</span></div></li>
+      <li class="rise"><div><b>We come look, free.</b><span>We walk the yard or the room with you and give you our honest take before any work starts.</span></div></li>
       <li class="rise"><div><b>We do the work.</b><span>We show up with the skid steer and the dump truck, and we're not done until the water runs away from your house.</span></div></li>
     </ol>
   </div>
@@ -310,10 +324,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <figure class="rise"><img src="img/work-02.webp" width="720" height="900" alt="Front yard stripped and graded smooth, ready for sod" loading="lazy" decoding="async" draggable="false"></figure>
       <figure class="rise"><img src="img/work-03.webp" width="720" height="900" alt="Skid steer bucket working the grade along the side of a house" loading="lazy" decoding="async" draggable="false"></figure>
       <figure class="rise"><img src="img/work-04.webp" width="720" height="900" alt="Graded side yard sloping away from the house with a drain riser set in" loading="lazy" decoding="async" draggable="false"></figure>
-      <figure class="rise"><img src="img/work-05.webp" width="720" height="718" alt="Finished house with dark board-and-batten siding and a cedar garage door" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure class="rise"><img src="img/work-05.webp" width="720" height="718" alt="Dark board-and-batten house with a cedar garage door, in snow" loading="lazy" decoding="async" draggable="false"></figure>
     </div>
     <a class="fb rise" href="https://www.facebook.com/profile.php?id=61585918380470" rel="noopener">
-      <span class="lbl"><svg aria-hidden="true"><use href="#i-fb"/></svg>Click to see more of our work.</span>
+      <span class="lbl"><svg aria-hidden="true"><use href="#i-fb"/></svg><span class="t">Click to see more of our work.</span></span>
       <span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
     </a>
   </div>
@@ -322,7 +336,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-navy ask" id="quote" aria-labelledby="h-ask">
   <div class="wrap">
     <div class="head rise">
-      <span class="eyebrow">Free quote</span>
       <h2 id="h-ask">Tell us about <span class="accent">the job.</span></h2>
       <p class="lede">We'll have the whole picture before we come out to look.</p>
     </div>
@@ -330,12 +343,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <form id="quoteForm" novalidate>
         <div class="field" id="f-name">
           <label for="name">Your name</label>
-          <input type="text" id="name" name="name" autocomplete="name" maxlength="60" aria-describedby="e-name">
+          <input type="text" id="name" name="name" autocomplete="name" maxlength="60" >
           <p class="err" id="e-name">Add your name so we know who we're talking to.</p>
         </div>
         <div class="field" id="f-phone">
           <label for="phone">Your phone, so we can call you back</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="e-phone">
+          <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="20" >
           <p class="err" id="e-phone">Add a phone number with the area code.</p>
         </div>
         <fieldset class="field">
@@ -349,7 +362,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </fieldset>
         <div class="field">
           <label for="where">Where's the job? <small>(optional)</small></label>
-          <input type="text" id="where" name="where" autocomplete="address-level2" maxlength="60" placeholder="Town or street">
+          <input type="text" id="where" name="where" autocomplete="address-level2" maxlength="60" placeholder="Town">
         </div>
         <div class="field">
           <label for="notes">Tell us about it <small>(optional)</small></label>
@@ -374,7 +387,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <div class="rise">
       <h2 id="h-close">Let's look at it together.</h2>
-      <p class="who">Send True Custom Construction a message and we'll come walk it with you. The first look is free.</p>
+      <p class="who">Send True Custom Construction a message and we'll set up a time to come out. The first look is free.</p>
     </div>
     <a class="btn btn-primary rise" data-msg href="https://m.me/61585918380470"><svg aria-hidden="true"><use href="#i-msgr"/></svg><span data-msg-label>Message us on Facebook</span></a>
   </div>
@@ -400,7 +413,6 @@ var CONFIG = {
   MESSENGER: 'https://m.me/61585918380470',
   FLOAT: true     // the floating message circle; false removes it
 };
-document.documentElement.classList.add('js');
 
 /* ===== Phone slots: header number, footer number, message buttons switch to texts ===== */
 (function(){
@@ -429,7 +441,7 @@ document.documentElement.classList.add('js');
   var h=document.getElementById('h1');
   if(!h||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var plain=h.innerHTML,i=0,last=null;
-  h.setAttribute('aria-label',h.textContent.replace(/\s+/g,' ').trim());
+  var label=h.textContent.replace(/\s+/g,' ').trim();
   function split(node,into){
     [].slice.call(node.childNodes).forEach(function(n){
       if(n.nodeType===3){
@@ -443,9 +455,17 @@ document.documentElement.classList.add('js');
       }else if(n.nodeType===1){var copy=n.cloneNode(false);split(n,copy);into.appendChild(copy)}
     });
   }
-  var frag=document.createDocumentFragment();split(h,frag);h.textContent='';h.appendChild(frag);
-  // once the last letter lands, put the plain heading back so kerning and text selection return
-  if(last)last.addEventListener('animationend',function(){h.innerHTML=plain;h.removeAttribute('aria-label')});
+  var done=false;
+  function go(){
+    if(done)return;done=true;
+    h.setAttribute('aria-label',label);var frag=document.createDocumentFragment();split(h,frag);h.textContent='';h.appendChild(frag);
+    document.documentElement.classList.remove('hold');
+    // once the last letter lands, put the plain heading back so kerning and text selection return
+    if(last)last.addEventListener('animationend',function(){h.innerHTML=plain;h.removeAttribute('aria-label')});
+  }
+  // wait for Cal Sans so the letters don't swap face mid-bounce; never wait more than 800ms
+  if(document.fonts&&document.fonts.load)document.fonts.load('400 84px "Cal Sans"').then(go,go);
+  setTimeout(go,800);
 })();
 
 /* ===== Service rows pick the job in the form ===== */
@@ -463,13 +483,13 @@ document.documentElement.classList.add('js');
   var form=document.getElementById('quoteForm');if(!form)return;
   var ready=document.getElementById('ready'),text=document.getElementById('readyText'),note=document.getElementById('readyNote'),send=document.getElementById('readySend');
   function val(id){return document.getElementById(id).value.trim()}
-  function mark(id,bad){var f=document.getElementById(id);f.classList.toggle('bad',bad);f.querySelector('input').setAttribute('aria-invalid',bad?'true':'false')}
+  function mark(id,bad){var f=document.getElementById(id);f.classList.toggle('bad',bad);var inp=f.querySelector('input');inp.setAttribute('aria-invalid',bad?'true':'false');if(bad)inp.setAttribute('aria-describedby',f.querySelector('.err').id);else inp.removeAttribute('aria-describedby')}
   function legacy(s){try{text.value=s;text.select();return document.execCommand('copy')}catch(e){return false}}
   function copy(s){
     try{if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(s).then(function(){return true},function(){return legacy(s)})}catch(e){}
     return Promise.resolve(legacy(s));
   }
-  form.addEventListener('input',function(e){var f=e.target.closest('.field');if(f&&f.classList.contains('bad')&&e.target.value.trim())f.classList.remove('bad')});
+  form.addEventListener('input',function(e){var f=e.target.closest('.field');if(f&&f.classList.contains('bad')&&e.target.value.trim())mark(f.id,false)});
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var name=val('name'),phone=val('phone'),where=val('where'),notes=val('notes'),job=form.querySelector('input[name=job]:checked');

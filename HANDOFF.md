@@ -1,52 +1,61 @@
-# True Custom Construction LLC — handoff at ~60%
+# True Custom Construction LLC — handoff at ~60% (calm revamp)
 
-**Live:** https://10elizabethbell.github.io/trueCustomConstruction/ · **Repo:** https://github.com/10elizabethbell/trueCustomConstruction · **Built:** 2026-10-18 from Muse brief 2026-10-18 (Essex County Contractor Referrals group post)
+**Live:** https://10elizabethbell.github.io/trueCustomConstruction/ · **Repo:** https://github.com/10elizabethbell/trueCustomConstruction · **Built:** 2026-10-18, revamped 2026-10-19 under the calm band style · Muse brief 2026-10-18
 
-## What's built
-- One page, phone first: header (wordmark + phone slot), hero, What we do / How it goes, Our work, Free quote form, close, footer.
-- **World:** a soil cutaway under an overcast sky. Topsoil over clay and stones, a dark board-and-batten wall (taken from their Facebook profile-photo house) with a downspout, rain, puddles, turf. Sod strips (grass on a soil band) are the section edges. The grass sways and leans away from the pointer or finger.
-- **Signature element:** you drive their yellow tracked Cat 279D skid steer across a lumpy yard that slopes *toward* the house. The bucket grades it to a slope that falls away from the house. Rain and downspout water stop pooling against the foundation and run off, and sod grows in on finished grade. It drives itself until touched. Drag works in every direction on phones (`touch-action:none` on the yard, pull-to-refresh off). On desktop (≥1024px) the scene is mirrored so the house and window fill the right side of the hero, and rain never falls across the text. When the whole lawn is finished it waits 13s and fades into a fresh yard. Constants sit at the top of the hero IIFE (`T = {...}`).
-- **Contact:** the primary button opens Facebook Messenger (`m.me/61585918380470`). The quote form builds the message, copies it, and offers "Open Messenger" with the message shown in a box in case the copy is blocked (Facebook's in-app browser).
-- **One switch for the phone number:** set `BIZ.PHONE` at the top of the script. The header's "Phone coming soon" becomes a tap-to-call number, the footer gets the number, and the form hands off as a pre-filled text (`sms:`) instead of Messenger. Tested both paths headlessly.
-- Photos: 4 stills cropped from their job-site video (`img/work-01..04.webp`) plus their profile photo (`work-05.webp`), 720px WebP, lazy-loaded. 5 photos, ~400KB in total.
+## What changed in the revamp (2026-10-19)
+- The drivable skid-steer soil-cutaway hero and the sod-strip section edges are gone. That build is in git history (`eb4f486`) and is the runner-up below.
+- The page now uses the calm band style: paper, slate navy and deep slate bands, Cat yellow as a fill, Cal Sans headings, pill buttons, 24px cards, and eyebrow pills on the hero and "What we do".
+- **Hero:** their own Cat 279D video frame (`img/hero.webp`) sits under a slate overlay on phones. The worst-pixel contrast is 6.3:1 or better for text. From 760px up, the tall 720x1280 frame sits beside the copy as a 24px card, because stretching it across a wide band would blow it up (calm-photo-style item 7).
+- **Motion:** the H1 bounces in letter by letter. It waits for Cal Sans (800ms at most), is held hidden until it splits so it doesn't flash, and restores the plain H1 afterwards. Sections fade up. Reduced motion and no-JS show everything at once.
+- **Floating message circle:** shows after the hero, and hides over the form and over the closing button.
+- **Order:** hero → What we do (3 rows that pre-select the form chip) → How it goes (3 steps) → Our work (5 photos plus "Click to see more of our work." Facebook row) → form → close → footer.
+- **Copy:** "Graded right. Built right." Every "free quote" became "free consultation", the brief's own wording. Repeated phrases are cut. The work-05 alt text no longer claims the house as their build.
+- **Photos:** `work-01` was dropped because it duplicated the hero. `work-06` is a new graded-yard frame from the video.
+- **New assets:** og image, a TC favicon and home-screen icon in the new palette, and a provenance sidecar for every raster.
+- **Verified** in Chromium and WebKit at 360, 390, 430, 820 and 1440px:
+  - no sideways scroll
+  - H1 and primary button on the first phone screen
+  - float states
+  - form errors, including the error border on focus
+  - Messenger hand-off text decodes correctly
+
+## Contact wiring
+- No phone is published. The header's top-right corner shows "Phone coming soon".
+- Every button opens `m.me/61585918380470`. The form writes the message, copies it, and shows it with "Open Messenger" and "Copy message again".
+- **One switch:** set `CONFIG.PHONE` at the top of the script. That turns on the header and footer number and makes every message button a pre-filled text (`sms:`).
 
 ## Assumptions I made
-- **Voice "we":** the post reads like a crew, and the video shows a skid steer plus a dump truck.
-- **Copy is mine, not theirs:** the headline "Built right from the dirt up.", the promise line and the three steps. It only claims what the post says (remodels, sod prep, grading for drainage, free consultation) and what the video shows (skid steer, dump truck).
-- **Equipment:** the skid steer has a "Western States" Cat dealer decal, so it may be rented. The copy says "we show up with", never "our own".
-- **The profile-photo house is their build.** It's a new dark board-and-batten house in snow. I used it as a work photo and as the hero wall. Confirm or swap.
-- **Colors:** there's no logo. Construction yellow for the action comes from the Cat machine in their video, charcoal-blue from the house siding, cedar from its garage door, on a cool concrete ground.
-- **Messenger link:** `m.me/<page id>` should open their page's Messenger. The `?text=` prefill is a best effort; Messenger often ignores it, so the copy-and-paste step is the real path.
+- "We" voice (a crew with a skid steer and a dump truck).
+- The colours are mine; there's no logo. The yellow comes from the Cat in their video, the navies from the dark house in their profile photo.
+- The headline and promise are my copy and claim only what the brief says.
 
 ## Placeholders and gaps
-- **Phone: none published.** The header's top-right shows "Phone coming soon" as plain text. The footer shows no phone until `BIZ.PHONE` is set.
-- **Email: none.** There's no footer email line; add one when known (footer only).
-- **Service area:** unknown, so there's no area section. The video's dry hills and the Western States Cat dealer decal suggest the inland Northwest, but I didn't use that.
-- No logo: the wordmark is set in the site's lettering, and the favicon and home-screen icon are a "TC" monogram (`apple-touch-icon.png`).
-- No reviews, prices, hours, owner name, license or insurance, so none appear on the page.
-- No remodel photos at all, though remodels are listed first in their post.
+- **Phone, email, service area, owner name, hours, reviews, licence and insurance:** none published.
+- **No place in the H1** (a house rule) because no area is known.
+- No logo, so the wordmark and the TC icon use the site's lettering.
+- No remodel photos.
 
 ## Questions for the owner
-- Phone number, and does it take texts? Email?
+- What's your phone number, and does it take texts? Email?
 - Which towns do you cover?
-- Owner's first name (for "Message Tom" style buttons and a personal line)?
-- Remodel photos, and before/after pairs of a graded yard → sod?
-- Is the dark board-and-batten house yours? Are the skid steer and dump truck yours?
-- Licensed/insured? Years in business?
+- Owner's first name?
+- Remodel photos, and a before/after of a yard?
+- Is the board-and-batten house (work-05) your build? If not, cut it.
+- Are the skid steer and truck yours?
+- Licensed and insured?
 
 ## Ideas not built (yours to pick)
-- **Headline alternative** (from the finish review): "Built right from the dirt up." is close to a stock phrase. The reviewer suggested "Rain runs away from your house.", which matches the hero's story but undersells remodels. Your call.
-- **Runner-up world:** sod rolls. A strip of sod unrolls across the hero under your finger, seams knitting together, with the section edges as rolled sod. Other worlds I considered: topographic contour lines that flatten under touch, skid-steer track prints laid by the pointer, a string line and grade stakes, and a remodel framing/blueprint world.
-- A before/after slider once they send a "before" of a yard.
-- Show the dump truck in the hero (dropping a load of topsoil on the first touch). Their video frames of it were too blurry to use as a photo.
-- A short muted clip from the video (skid steer working, ~6s) in the gallery. Skipped for weight and because it's handheld.
-- Use the hero's finished lawn as a "done" moment: a small "Graded. Water runs away from the house." note.
-- An area line in the footer once the towns are known (plain text, never pills).
+- **Runner-up signature hero:** the drag-to-grade skid steer (git `eb4f486`). Other worlds: sod rolls that unroll, contour lines that flatten.
+- **Conflicts kept by house rule:** Impeccable flags the eyebrow pills, the bounce-in with overshoot, the floating circle, the fade-up on every section and the band texture. All of them stay.
+- Self-host Cal Sans to drop the Google Fonts chain (the sweep suggested it). The skill allows Google Fonts.
+- Hide the form when JS is off.
+
+## Not done yet (usage limit hit)
+- **DESIGN.md and `.impeccable/design.json` still describe the OLD build.** Regenerate them with `impeccable-documenter`.
+- No final Impeccable re-sweep after the last fixes.
+- The orchestrator's done mark (`trueCustomConstruction.revamp-done`) was not touched.
 
 ## Not verified
-- **Is `profile.php?id=61585918380470` a Page or a personal profile?** If it's a personal profile, `m.me/<id>` may not open a chat, and that would break every contact button (hero, form, close). Test it on a phone before sending the link.
-- The large desktop work-01 tile is about 1.5x upscaled: the source video is only 720px wide. Phone sizes are sharp.
-- Real-device touch (iOS Safari and Facebook's in-app browser), frame rate on older phones.
-- That `m.me/61585918380470` opens the right Messenger thread in the app.
-- Whether clipboard copy works inside Facebook's in-app browser (there's a visible fallback either way).
-- The SMS hand-off on a real iPhone/Android (only tested headlessly with a dummy number).
+- Whether `m.me/61585918380470` opens a chat (it may be a personal profile, not a Page). Test on a phone first.
+- Clipboard copy and the hand-off inside Facebook's in-app browser.
+- Real-device iOS and Android.
